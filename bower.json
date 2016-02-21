@@ -1,0 +1,19 @@
+{
+  "author": "Pavlo Bashynskyi",
+  "name": "c2c",
+  "email": "levonet@gmail.com",
+  "version": "0.0.0",
+  "ignore": [
+    ".enb/tmp",
+    "node_modules",
+    "libs"
+  ],
+  "dependencies": {
+    "bem-core": "2.8.0",
+    "bem-components": "2.4.0",
+    "bem-stat-counters": "^1.2.0"
+  },
+  "resolutions": {
+    "bem-core": "2.8.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "c2c",
+  "description": "Connect to Crimea",
+  "version": "0.0.0",
+  "author": {
+    "name": "Pavlo Bashynskyi",
+    "email": "levonet@gmail.com"
+  },
+  "repository": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "devDependencies": {
+    "borschik-tech-cleancss": "^2.0.1",
+    "enb": "^0.17.2",
+    "bower": "^1.5.3",
+    "enb-bem-i18n": "^1.1.0",
+    "enb-bem-techs": "^2.0.1",
+    "enb-bemxjst": "^2.0.2",
+    "enb-bemxjst-i18n": "^1.0.0-beta3",
+    "enb-borschik": "^2.0.0",
+    "enb-js": "^1.1.0",
+    "enb-stylus": "^2.0.0"
+  },
+  "scripts": {
+    "start": "enb server",
+    "postinstall": "npm run deps",
+    "deps": "bower install",
+    "clean": "./tools/clean.sh"
+  },
+  "private": true
+}

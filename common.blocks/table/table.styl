@@ -1,0 +1,51 @@
+$sizes = {
+    s: 4px,
+    m: 6px,
+    l: 8px,
+    xl: 12px,
+    xxl: 18px
+}
+
+$root = '.table'
+
+{$root}
+    border-spacing 0
+
+    &__cell
+        padding 2px 0
+        text-align left
+        -webkit-font-smoothing antialiased
+        font-family 'Scada', sans-serif
+        //font-weight 300
+        color $color-text-font
+        font-size 24px
+        line-height 1em
+
+        & + &
+            padding-left 8px
+
+for gap in $sizes
+    {$root}_gap_{gap} {$root}__cell
+        padding: $sizes[gap]
+
+        &:first-child
+            padding-left 0
+
+        &:last-child
+            padding-right 0
+
+for gap in $sizes
+    {$root}_gap-x_{gap} {$root}__cell
+        padding-right: $sizes[gap]
+        padding-left: $sizes[gap]
+
+        &:first-child
+            padding-left 0
+
+        &:last-child
+            padding-right 0
+
+for gap in $sizes
+    {$root}_gap-y_{gap} {$root}__cell
+        padding-top: $sizes[gap]
+        padding-bottom: $sizes[gap]

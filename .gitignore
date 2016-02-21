@@ -1,0 +1,11 @@
+node_modules/
+libs/
+*.sublime-*
+*.log
+*~
+
+# bem
+.enb/tmp/
+*.bundles*/*/*.*
+!*.bundles*/*/blocks/*
+!*.bundles*/*/*.bemjson.js

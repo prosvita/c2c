@@ -1,0 +1,35 @@
+.header
+
+    &__langs
+        display table-cell
+        vertical-align middle
+        list-style-type none
+        padding-left 30px
+        padding-right 30px
+
+    &__lang
+        -webkit-font-smoothing antialiased
+        font-family 'Scada', sans-serif
+        font-size 16px
+
+        &_current
+            font-weight bold
+
+        & .link
+            text-decoration none
+            background-color rgba($rgb-pri-dark, 0.7)
+            padding-left 10px
+            padding-right 10px
+            display block
+            margin-top 2px
+            margin-bottom 2px
+
+            &,
+            &:link,
+            &:visited
+                color rgb($rgb-pri-bright)
+
+            &:hover
+                color rgb($rgb-compl-deep)
+                background-color rgba($rgb-pri-bright, 0.7)
+                font-weight normal
