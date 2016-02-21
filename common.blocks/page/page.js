@@ -4,7 +4,10 @@ provide(BEMDOM.decl(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-                cookie.set('language', i18n('page', 'lang'));
+                if (cookie.get('language') !== i18n('page', 'lang')) {
+                    cookie.set('language', null); // HACK: Чомусь залишається попередня кука
+                    cookie.set('language', i18n('page', 'lang'), { path: '/' });
+                }
             }
         }
     }
