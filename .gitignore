@@ -9,3 +9,4 @@ libs/
 *.bundles*/*/*.*
 !*.bundles*/*/blocks/*
 !*.bundles*/*/*.bemjson.js
+_/
