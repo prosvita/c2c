@@ -4,13 +4,13 @@
 
 LANGS="uk crh ru"
 BNDL_EXCLUDE="blocks ?.bemjson.js ?.{lang}.bemjson.js"
-ROOT_REMOVE="_ libs node_modules"
+ROOT_REMOVE="_"
 
 # Const
 
 PLATFORMS="desktop touch-pad touch-phone"
 PLATFORMSUFIX=".bundles"
-RM="echo rm -rf"
+RM="rm -rf"
 
 ###
 
