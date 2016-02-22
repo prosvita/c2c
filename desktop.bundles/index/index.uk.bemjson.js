@@ -26,7 +26,9 @@ module.exports = {
         { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Scada:400,700&subset=latin,cyrillic' }
     ],
     scripts: [
-        { elem: 'js', url: 'index.min.js', i18n: true }
+        { elem: 'js', url: 'index.min.js', i18n: true },
+        { elem: 'js', url: 'https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js' },
+        { elem: 'js', url: 'https://yastatic.net/share2/share.js', attrs: { async: 'async' }}
     ],
     content: [
         {
@@ -73,7 +75,12 @@ module.exports = {
                         {
                             elem: 'paragraph',
                             content: "На цій сторінці ми хочемо зібрати всі доступні способи зв'язку. Опишемо яким чином спілкуватися можна дешевше, що для цього потрібно зробити."
-                        }
+                        },
+                        {
+                            elem: 'paragraph',
+                            content: "Якщо ви вважаєте корисною інформацію на цій сторінці, допоможіть іншим дізнатися про неї. Поділіться цією сторінкою у своїй соціальній мережі, це допоможе іншим дізнатися про способи зв'язку між Кримом і Україною."
+                        },
+                        { block: 'ya-share2' }
                     ]
                 },
                 {
