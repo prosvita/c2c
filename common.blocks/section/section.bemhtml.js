@@ -13,6 +13,7 @@ block('section')(
             },
             {
                 elem: 'container',
+                anchor: this.ctx.anchor,
                 content: applyNext()
             }
         ];
@@ -20,9 +21,15 @@ block('section')(
 
     elem('anchor')(
         tag()(false),
-        match(function() { return this.ctx.anchor; })(
+        match(function(){ return this.ctx.anchor; })(
             tag()('a'),
             attrs()(function(){ return { name: this.ctx.anchor }; } )
+        )
+    ),
+
+    elem('container')(
+        match(function(){ return ! this.ctx.anchor; })(
+            mix()({ elemMods: {'anchor': 'no'} })
         )
     ),
 
