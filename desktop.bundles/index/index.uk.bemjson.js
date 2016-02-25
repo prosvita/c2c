@@ -34,9 +34,9 @@ module.exports = {
         {
             block: 'header',
             content: [
-                /* {
+                {
                     elem: 'logo'
-                }, */
+                },
                 {
                     elem: 'nav',
                     content: [
