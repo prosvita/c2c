@@ -3,10 +3,13 @@ block('header')(
     elem('langs')(
         tag()('ul'),
         content()(function(){
+            var bundle = this.ctx.bundle;
+
             return this.ctx.content.map(function(lang){
                 return [{
                     elem: 'lang',
-                    lang: lang
+                    lang: lang,
+                    bundle: bundle
                 }]
             });
         })
@@ -18,7 +21,7 @@ block('header')(
             return {
                 block: 'link',
                 // mods: { pseudo: true },
-                url: this.ctx.lang.url + '/',   //FIXIT: Повний url (`/{this.ctx.lang}/{bundleName}.html`)
+                url: this.ctx.lang.url + '/' + this.ctx.bundle,   //FIXIT: Повний url (`/{this.ctx.lang}/{bundleName}.html`)
                 content: this.ctx.lang.content  //FIXIT: this.i18n('header', this.ctx.lang)
             };
         }),

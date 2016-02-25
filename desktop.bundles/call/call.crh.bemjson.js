@@ -1,0 +1,1 @@
+call.uk.bemjson.js

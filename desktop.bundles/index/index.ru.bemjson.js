@@ -1,1 +1,0 @@
-index.uk.bemjson.js

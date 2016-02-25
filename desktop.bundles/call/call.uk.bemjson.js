@@ -22,11 +22,11 @@ module.exports = {
     ],
     styles: [
         //TODO: Збирати один css для всіх мов
-        { elem: 'css', url: 'index.min.css', i18n: true },
+        { elem: 'css', url: 'call.min.css', i18n: true },
         { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Scada:400,700&subset=latin,cyrillic' }
     ],
     scripts: [
-        { elem: 'js', url: 'index.min.js', i18n: true },
+        { elem: 'js', url: 'call.min.js', i18n: true },
         { elem: 'js', url: 'https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js' },
         { elem: 'js', url: 'https://yastatic.net/share2/share.js', attrs: { async: 'async' }}
     ],
@@ -48,6 +48,7 @@ module.exports = {
                 },
                 {
                     elem: 'langs',
+                    bundle: 'call', // FIXIT: Витягати автоматично
                     // TODO: Передавати тільки моду lang: [ 'uk', 'crh', 'ru' ]
                     // В шаблоні додаємо назву бандлу і робимо з цього посилання.
                     // Назви кладемо у i18n
