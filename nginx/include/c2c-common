@@ -1,0 +1,21 @@
+location = / {
+    if ($cookie_language) {
+        return 302 /$cookie_language/;
+    }
+    return 302 /uk/call;
+}
+
+location ~ ^/(?<lang>(uk|crh|ru)) {
+
+    rewrite ^/\w+/?(\?.*)?$ /$lang/call/$1 permanent;
+    rewrite ^/\w+/([\w-]+)/?(\?.*)?$ /desktop.pages/$1/$1.$lang.html$2 last;
+}
+
+location /_/ {
+    gzip_static on;
+}
+
+location = /favicon.ico {
+    alias /var/www/c2c-beta/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
+    access_log off;
+}
