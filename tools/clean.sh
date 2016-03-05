@@ -4,7 +4,7 @@
 
 LANGS="uk crh ru"
 BNDL_EXCLUDE="blocks ?.bemjson.js ?.{lang}.bemjson.js"
-ROOT_REMOVE="_"
+ROOT_REMOVE=".enb/tmp _"
 
 # Const
 
@@ -74,6 +74,7 @@ for bundle in ${allbundles[*]}; do
                 done
 
                 if [ -z "$ignore" ]; then
+                    echo " delete $f"
                     $RM "$f"
                 fi
 
@@ -86,5 +87,8 @@ done
 ### Remove files from root
 
 for f in $ROOT_REMOVE; do
-    $RM "$f"
+    if [ -e "$f" ]; then
+        echo " delete $f"
+        $RM "$f"
+    fi
 done
