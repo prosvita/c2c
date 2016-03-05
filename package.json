@@ -24,8 +24,9 @@
   },
   "scripts": {
     "start": "enb server",
-    "postinstall": "npm run deps",
+    "postinstall": "npm run deps; npm run configs",
     "deps": "bower install",
+    "configs": "rm -rf configs/current; ln -sf ${YENV:-development} configs/current; ln -sf configs/current/borschik .borschik",
     "clean": "./tools/clean.sh"
   },
   "private": true

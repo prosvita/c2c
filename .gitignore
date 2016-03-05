@@ -10,3 +10,7 @@ libs/
 !*.bundles*/*/blocks/*
 !*.bundles*/*/*.bemjson.js
 _/
+
+# symlinks
+configs/current
+.borschik
