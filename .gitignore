@@ -9,6 +9,7 @@ libs/
 *.bundles*/*/*.*
 !*.bundles*/*/blocks/*
 !*.bundles*/*/*.bemjson.js
+!*.bundles*/*/*.md
 _/
 
 # symlinks

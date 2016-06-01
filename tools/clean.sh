@@ -3,7 +3,7 @@
 # Settings
 
 LANGS="uk crh ru"
-BNDL_EXCLUDE="blocks ?.bemjson.js ?.{lang}.bemjson.js"
+BNDL_EXCLUDE="blocks ?.bemjson.js ?.{lang}.bemjson.js ?.{lang}.md"
 ROOT_REMOVE=".enb/tmp _"
 
 # Const
