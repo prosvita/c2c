@@ -54,9 +54,9 @@ module.exports = function (config) {
 //            })
 
             // borschik
-            [borschikTech, { sourceTarget: '?.{lang}.css', destTarget: '?.{lang}.min.css', tech: 'cleancss', freeze: true, minify: isProd }],
-            [borschikTech, { sourceTarget: '?.{lang}.js', destTarget: '?.{lang}.min.js', freeze: true, minify: isProd }],
-            [borschikTech, { sourceTarget: '?.{lang}.src.html', destTarget: '?.{lang}.html', freeze: true, minify: isProd }],
+            [borschikTech, { source: '?.{lang}.css', target: '?.{lang}.min.css', freeze: true, minify: isProd }],
+            [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
+            [borschikTech, { source: '?.{lang}.src.html', target: '?.{lang}.html', freeze: true, minify: isProd }],
         ]);
 
         nodeConfig.addTargets([
@@ -85,6 +85,7 @@ module.exports = function (config) {
             [require('enb-stylus/techs/stylus'), {
                 filesTarget: '?.{lang}.files',
                 target: '?.{lang}.css',
+                sourcemap: false,
 //                autoprefixer: {
 //                    browsers: [
 //                        'last 2 versions',
