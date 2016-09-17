@@ -48,6 +48,11 @@ module.exports = function (config) {
                 lang: '{lang}'
             }],
 
+            // css
+//            sources: nodeConfig.getLanguages().forEach(function(lang){
+//                return '?.' + lang + '.bemdecl.js';
+//            })
+
             // borschik
             [borschikTech, { sourceTarget: '?.{lang}.css', destTarget: '?.{lang}.min.css', tech: 'cleancss', freeze: true, minify: isProd }],
             [borschikTech, { sourceTarget: '?.{lang}.js', destTarget: '?.{lang}.min.js', freeze: true, minify: isProd }],
