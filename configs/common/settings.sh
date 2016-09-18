@@ -3,7 +3,7 @@ LANGS="uk crh ru"
 
 PLATFORMS="desktop touch-pad touch-phone"
 PLATFORMSUFIX=".bundles"
-TARGETS='?.{lang}.html ?.{lang}.md'
+TARGETS='?.{lang}.html'
 TECHS='blocks ?.bemjson.js ?.{lang}.bemjson.js ?.{lang}.md'
 FREEZE="_"
 
