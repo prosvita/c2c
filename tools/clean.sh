@@ -1,81 +1,47 @@
 #!/bin/bash
 
-# Settings
+. ./tools/common
 
-LANGS="uk crh ru"
-BNDL_EXCLUDE="blocks ?.bemjson.js ?.{lang}.bemjson.js ?.{lang}.md"
-ROOT_REMOVE=".enb/tmp _"
+### Settings
 
-# Const
-
-PLATFORMS="desktop touch-pad touch-phone"
-PLATFORMSUFIX=".bundles"
 RM="rm -rf"
 
-###
+. ./configs/current/settings.sh
+
+if [[ -z ${TECHS+x} || -z ${LANGS+x} || -z ${PLATFORMS+x} || -z ${PLATFORMSUFIX+x} ]]; then
+    echo "one or more variables are undefined"
+    exit 1
+fi
+
+### Get excluded files
 
 excludetechs=()
+fill_langs excludetechs "${TECHS}" "${LANGS}"
 
-for excl in $BNDL_EXCLUDE; do
-    if [ -n "$LANGS" ]; then
-        for lang in $LANGS; do
-            pattern="s/{lang}/$lang/"
-            excludetechs[${#excludetechs[*]}]=`echo $excl | sed $pattern`
-        done
-    else
-        excludetechs[${#excludetechs[*]}]=$excl
-    fi
-done
+bundles=()
+get_bundles bundles "${PLATFORMS}" "${PLATFORMSUFIX}"
 
-tmpIFS=$IFS
-IFS=$'\n'
-excludetechs=( $(echo "${excludetechs[*]}" | sort | uniq) )
-IFS=$tmpIFS
-
-###
-
-allbundles=()
-
-for platform in $PLATFORMS; do
-    if [ -d "$platform$PLATFORMSUFIX" ]; then
-        for d in `ls -d $platform$PLATFORMSUFIX/*`; do
-            if [ -d "$d" ]; then
-                allbundles[${#allbundles[*]}]=$(basename $d)
-            fi
-        done
-    fi
-done
-
-tmpIFS=$IFS
-IFS=$'\n'
-allbundles=( $(echo "${allbundles[*]}" | sort | uniq) )
-IFS=$tmpIFS
+excludefiles=()
+get_tehcs_files excludefiles "${bundles[*]}" "${PLATFORMS}" "${PLATFORMSUFIX}" "${excludetechs[*]}"
 
 ### Remove files from bundles
 
-for bundle in ${allbundles[*]}; do
-    for platform in $PLATFORMS; do
-        if [ -d "$platform$PLATFORMSUFIX/$bundle" ]; then
+for bundle in ${bundles[*]}; do
+    for platform in ${PLATFORMS}; do
+        if [ -d "${platform}${PLATFORMSUFIX}/${bundle}" ]; then
 
-            exclude=()
-
-            for excl in ${excludetechs[*]}; do
-                pattern="s/?/$bundle/"
-                exclude[${#exclude[*]}]="$platform$PLATFORMSUFIX/$bundle/$(echo $excl | sed $pattern)"
-            done
-
-            for f in `ls -d $platform$PLATFORMSUFIX/$bundle/*`; do
+            for f in $(ls -d ${platform}${PLATFORMSUFIX}/${bundle}/*); do
 
                 ignore=
-                for excl in ${exclude[*]}; do
-                    if [ $f == $excl ]; then
+                for excl in ${excludefiles[*]}; do
+                    if [ ${f} == ${excl} ]; then
                         ignore=1
                     fi
                 done
 
-                if [ -z "$ignore" ]; then
-                    echo " delete $f"
-                    $RM "$f"
+                if [ -z "${ignore}" ]; then
+                    echo " delete ${f}"
+                    ${RM} "${f}"
                 fi
 
             done
@@ -86,9 +52,11 @@ done
 
 ### Remove files from root
 
-for f in $ROOT_REMOVE; do
-    if [ -e "$f" ]; then
-        echo " delete $f"
-        $RM "$f"
+for f in ${ROOT_REMOVE}; do
+    if [ -e "${f}" ]; then
+        echo " delete ${f}"
+        ${RM} "${f}"
     fi
 done
+
+### End

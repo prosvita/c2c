@@ -30,6 +30,7 @@
     "deps": "bower install",
     "configs": "rm -rf configs/current; ln -sf ${YENV:-development} configs/current; ln -sf configs/current/borschik .borschik",
     "build": "enb make *.bundles/*",
+    "deploy": "./tools/deploy.sh",
     "clean": "./tools/clean.sh"
   },
   "private": true

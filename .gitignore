@@ -15,3 +15,8 @@ _/
 # symlinks
 configs/current
 .borschik
+
+# deploy
+sitemap.xml
+robots.txt
+*.gz
