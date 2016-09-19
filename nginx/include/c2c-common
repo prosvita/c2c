@@ -8,11 +8,12 @@ location = / {
 location ~ ^/(?<lang>(uk|crh|ru)) {
 
     rewrite ^/\w+/?(\?.*)?$ /$lang/call/$1 permanent;
-    rewrite ^/\w+/([\w-]+)/?(\?.*)?$ /desktop.pages/$1/$1.$lang.html$2 last;
+    rewrite ^/\w+/([\w-]+)/?(\?.*)?$ /desktop.bundles/$1/$1.$lang.html$2 last;
 }
 
 location /_/ {
     gzip_static on;
+    expires 365d;
 }
 
 location = /favicon.ico {
