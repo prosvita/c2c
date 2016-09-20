@@ -1,4 +1,4 @@
-# Settings for tools scripts
+# Common settings
 LANGS="uk crh ru"
 
 PLATFORMS="desktop touch-pad touch-phone"

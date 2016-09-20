@@ -2,10 +2,12 @@
 
 . ./configs/common/settings.sh
 
-# Settings for tools scripts
+# Settings for development mode
 
 unset FREEZE
-HOST="localhost"
-TARBALL_NAME="c2c-dev"
+unset COMPRESS_EXT
+unset HOST
 
+TARGETS='blocks ?.{lang}.min.css ?.{lang}.min.js ?.{lang}.html'
+TARBALL_NAME="c2c-dev"
 ROOT_REMOVE=".enb/tmp"

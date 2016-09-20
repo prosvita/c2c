@@ -1,1 +1,10 @@
-{ "paths" : { "./": "/" } }
+{
+    "paths": {
+        "./": "/"
+    },
+    "freeze_paths": {
+        "./*.blocks/**/*.svg": ":encodeURIComponent:",
+        "./*.blocks/**/*.png": ":base64:",
+        "./libs/**/*.svg": ":encodeURIComponent:"
+    }
+}

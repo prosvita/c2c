@@ -2,4 +2,4 @@
 
 . ./configs/common/settings.sh
 
-# Settings for tools scripts
+# Settings for production mode

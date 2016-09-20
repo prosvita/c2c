@@ -2,6 +2,6 @@
 
 . ./configs/common/settings.sh
 
-# Settings for tools scripts
+# Settings for testing mode
 
 TARBALL_NAME="c2c-beta"
