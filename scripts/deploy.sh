@@ -8,6 +8,8 @@ GIT="git"
 
 . ./configs/current/settings.sh
 
+REVISION=$(TZ=EDT date '+%Y%m%dT%H%M%SEDT')
+
 if [[ -z ${TARGETS+x} || -z ${LANGS+x}
         || -z ${PLATFORMS+x} || -z ${PLATFORMSUFIX+x}
         || -z ${TARBALL_DIR+x} || -z ${TARBALL_NAME+x} ]]; then
@@ -67,6 +69,8 @@ fi
 
 if [[ -n ${SCHEME+x} && -n ${HOST+x} ]]; then
     cat << EOF > robots.txt
+# mode: ${YENV}
+# revision: ${REVISION}
 User-Agent: *
 Disallow: /_
 Host: ${HOST}
@@ -101,6 +105,11 @@ fi
 
 ### Make tarball
 
-tar -zcvf "${TARBALL_DIR}/${TARBALL_NAME}-$(TZ=EDT date '+%Y%m%dT%H%M%SEDT').tar.gz" ${targetfiles[*]}
+DIST_FILE="${TARBALL_DIR}/${TARBALL_NAME}-${REVISION}.tar.gz"
+
+tar -zcvf ${DIST_FILE} ${targetfiles[*]}
+echo ${DIST_FILE} > .dist
+
+echo "Saved to ${DIST_FILE}"
 
 ### End
