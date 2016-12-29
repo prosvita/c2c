@@ -56,12 +56,12 @@
 
 Ниже приведено сравнение основных операторов связи, предоставляющих услуги интернет-телефонии.
 
-|Сравнение возможностей|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/home)|
-|:--|:--:|:--:|:--:|
-|Городской номер| да | нет | нет |
-|Регистрация номера через интернет| да | [ограничено](http://my.ukrtelecom.ua/ua/group_ip/snsipphone/getting_started/) | [да](https://atelecom.biz/rus/start-packs) |
-|Оплата через Visa и MasterCard| да | нет | да |
-|Предоплата| дополнительная услуга | нет | да |
+|Сравнение возможностей|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/home)|[Zadarma](https://zadarma.com/ru)|
+|:--|:--:|:--:|:--:|:--:|
+|Городской номер| да | нет | нет | [дополнительная услуга](https://zadarma.com/ru/services/numbers/) |
+|Регистрация номера через интернет| да | [ограничено](http://my.ukrtelecom.ua/ua/group_ip/snsipphone/getting_started/) | [да](https://atelecom.biz/rus/start-packs) | [да](https://my.zadarma.com/registration/?language=ru) |
+|Оплата через Visa и MasterCard| да | нет | да | [да](https://zadarma.com/ru/topup/choose/) |
+|Предоплата| дополнительная услуга | нет | да | да |
 
 Выбор оператора и услуги зависит от потребностей и возможностей.
 
@@ -81,13 +81,13 @@
 В любом случае рекомендуется закрыть на телефоне выход на международные направления.
 Это нужно сделать во время оформления договора на номер у оператора или в личном кабинете, если оператор предоставляет такую возможность.
 
-|Сравнение тарифов|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/tariffs/all_tariffs)|
-|:--|:--:|:--:|:--:|
-|Подключение, грн| 1 | 0 | 50 |
-|Абонентская плата, грн/мес.| 46,97 | 10 | 0 |
-|На городские, грн/мин| 1000 мин 0, потом 0,054 | — | — |
-|На междугородние, грн/мин| 0,66 | 0,43 | 0,5 |
-|На мобильные, грн/мин| 1,2 | 1,2 | 0,75 |
+|Сравнение тарифов|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/tariffs/all_tariffs)|[Zadarma](https://zadarma.com/ru/tariffs/calls/compare/)|
+|:--|:--:|:--:|:--:|:--:|
+|Подключение| 1 грн | 0 | 25 грн +<br/>25 грн на счет | ? |
+|Абонентская плата| 46,97 грн/мес. | 10 грн/мес. | 0 | 0 |
+|На городские| 1000 мин 0,<br/>далее 0,054 грн/мин | — | — | [?](https://zadarma.com/ru/tariffs/numbers/ukraine) |
+|На междугородние| 0,66 грн/мин | 0,43 грн/мин | 0,5 грн/мин | 7,5 р/мин |
+|На мобильные| 1,2 грн/мин | 1,2 грн/мин | 0,75 грн/мин | 15 р/мин |
 
 Для обзора выбрано по одному типичному тарифу от каждого оператора.
 Ознакомиться со всеми условиями и другими тарифами вы можете на сайте каждого из операторов.
@@ -156,6 +156,7 @@
   - [Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone)
   - [Укртелеком](http://my.ukrtelecom.ua/ua/group_ip/snsipphone/howto/)
   - [Атлантис Телеком](https://atelecom.biz/rus/configurations)
+  - [Zadarma](https://zadarma.com/ru/support/instructions/)
 
 Для пожилых людей в отдельных случаях есть возможность пользоваться обычным телефоном с тоновым набором.
 Для этого нужно приобрести VoIP-шлюз.
