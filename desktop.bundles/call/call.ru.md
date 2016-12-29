@@ -20,24 +20,28 @@
 | Оператор, Тариф | На мобильные | На городские телефоны |
 |:--|:--:|:--:|
 |[МТС](http://www.kuban.mts.ru/), «[Супер МТС](http://www.kuban.mts.ru/mob_connect/tariffs/tariffs/supermts/)»|20 руб/мин|20 руб/мин|
-|[Крымтелеком](http://ktkru.ru/)|36,58 руб/мин|36,58 руб/мин|
+|[Крымтелеком](http://ktkru.ru/)|36,58 руб/мин<sup><small>*</small></sup>|36,58 руб/мин<sup><small>*</small></sup>|
 |[Skype](https://skype.com)|20 ¢/мин|10 ¢/мин|
+
+<sup><small>*</small></sup> Отсутствует гарантия возможности совершения вызовов.
 
 В большинстве случаев позвонить в Крым возможно только на номера МТС:
 
 | Оператор, Тариф | На МТС (+7) | На городские телефоны |
 |:--|:--:|:--:|
 |[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/мин| — |
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 грн/мин| ? |
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 грн/мин| ? |
-|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 грн/мин| ? |
-|[Lifecell](http://www.lifecell.ua/ru/), «[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)»|2,86 грн/мин| ? |
-|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 грн/мин| ? |
-|[Киевстар](http://www.kyivstar.ua), «[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)»|1,5 грн/мин| ? |
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 грн/мин|5 грн/мин<sup><small>*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 грн/мин|5 грн/мин<sup><small>*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 грн/мин|11 грн/мин<sup><small>*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/), «[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)»|2,86 грн/мин|0,73 грн/мин<sup><small>*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 грн/мин|20 грн/мин<sup><small>*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua), «[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)»|1,5 грн/мин|1,5 грн/мин<sup><small>*</small></sup>|
 |[Viber Out](https://account.viber.com/ru/)|9,5 ¢/мин|2,3 ¢/мин|
 |[Skype](https://secure.skype.com/ru/calling-rates?wt.mc_id=revamp&expo365=empty)|10 ¢/мин|2,3 ¢/мин|
 
-Нужно помнить: при звонках на мобильный номер в Крыму со счета его владельца также будут сниматься средства за каждую минуту разговора.
+<sup><small>*</small></sup> Отсутствует гарантия возможности совершения вызовов.
+
+Нужно помнить: при звонках на мобильный номер в Крыму со счета его владельца также могут сниматься средства за каждую минуту разговора.
 
 Чтобы узнать, как изменились телефонные номера в Крыму, перейдите в раздел «[Телефонные коды городов Крыма](#codes)».
 
@@ -83,9 +87,9 @@
 
 |Сравнение тарифов|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/tariffs/all_tariffs)|[Zadarma](https://zadarma.com/ru/tariffs/calls/compare/)|
 |:--|:--:|:--:|:--:|:--:|
-|Подключение| 1 грн | 0 | 25 грн +<br/>25 грн на счет | ? |
+|Подключение| 1 грн | 0 | 25 грн +<br/>25 грн на счет | 0 |
 |Абонентская плата| 46,97 грн/мес. | 10 грн/мес. | 0 | 0 |
-|На городские| 1000 мин 0,<br/>далее 0,054 грн/мин | — | — | [?](https://zadarma.com/ru/tariffs/numbers/ukraine) |
+|На городские| 1000 мин 0,<br/>далее 0,054 грн/мин | — | — | [7,5 р/мин](https://zadarma.com/ru/tariffs/numbers/ukraine) |
 |На междугородние| 0,66 грн/мин | 0,43 грн/мин | 0,5 грн/мин | 7,5 р/мин |
 |На мобильные| 1,2 грн/мин | 1,2 грн/мин | 0,75 грн/мин | 15 р/мин |
 
@@ -142,7 +146,7 @@
 
 На территории Крыма банки не выдают пластиковых карт Visa или MasterCard.
 Но возможно самостоятельно сделать счет «[Яндекс.Денег](https://money.yandex.ru/)» или открыть кошелек [QIWI](https://qiwi.com/).
-Эти платежные системы позволяют делать международные переводы через виртуальные карты MasterCard и Visa.
+Эти платежные системы позволяют делать международные переводы через виртуальные карты MasterCard и Visa после [прохождения идентификации](https://money.yandex.ru/doc.xml?id=526543).
 
 Если это не подходит, то про совершение оплаты остается просить родных или знакомых на материковой территории Украины.
 
