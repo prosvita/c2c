@@ -11,14 +11,14 @@ module.exports = {
         { elem: 'meta', attrs: { property: "og:title", content: "Зв'язок з Кримом" } },
         { elem: 'meta', attrs: { property: "og:description", content: "Всі можливості зв'язку з Кримом. Ми порівняли популярні тарифи, їх вартість та засоби зв'язку, щоб вам було легше обрати зручний спосіб і частіше спілкуватися з вашими родичами." } },
         { elem: 'meta', attrs: { property: "og:url", content: "http://connect.crimea.ua/uk/" } },
-        { elem: 'meta', attrs: { property: "og:image", content: "https://img-fotki.yandex.ru/get/64120/204961608.0/0_1031ee_2f01d51_orig" } },
+        { elem: 'meta', attrs: { property: "og:image", content: "https://img-fotki.yandex.ru/get/108697/204961608.0/0_12694e_4d33a55e_orig" } },
         { elem: 'meta', attrs: { property: "og:locale", content: "uk_UA" } },
         { elem: 'meta', attrs: { property: "fb:app_id", content: "1093711844024689" } },
         { elem: 'meta', attrs: { property: "twitter:card", content: "summary" } },
         { elem: 'meta', attrs: { property: "twitter:title", content: "Зв'язок з Кримом" } },
         { elem: 'meta', attrs: { property: "twitter:description", content: "Всі можливості зв'язку з Кримом. Ми порівняли популярні тарифи, їх вартість та засоби зв'язку, щоб вам було легше обрати зручний спосіб і частіше спілкуватися з вашими родичами." } },
         { elem: 'meta', attrs: { property: "twitter:url", content: "http://connect.crimea.ua/uk/" } },
-        { elem: 'meta', attrs: { property: "twitter:image", content: "https://img-fotki.yandex.ru/get/65449/204961608.0/0_103206_b3cbc87a_orig" } }
+        { elem: 'meta', attrs: { property: "twitter:image", content: "https://img-fotki.yandex.ru/get/174352/204961608.0/0_12694f_f77ce585_orig" } }
     ],
     styles: [
         //TODO: Збирати один css для всіх мов
