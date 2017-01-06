@@ -68,17 +68,23 @@ npm run gemini-dist
 ```
 
 Запуск тестів на зовнішньому сайті:
+
   - за посиланням на production
+
     ```bash
     YENV=production npm run configs
     npm run gemini-site
     ```
+
   - за посиланням на beta
+
     ```bash
     YENV=testing npm run configs
     npm run gemini-site
     ```
+
   - за посиланням користувача
+
     ```bash
     BASEURL=http://somehost.tld/ npm run gemini-site
     ```
