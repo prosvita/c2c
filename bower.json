@@ -9,11 +9,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "2.8.0",
-    "bem-components": "2.4.0",
-    "bem-stat-counters": "^1.2.0"
-  },
-  "resolutions": {
-    "bem-core": "2.8.0"
+    "bem-components": "^3.0.1",
+    "bem-stat-counters": "^1.5.1"
   }
 }
