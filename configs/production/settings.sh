@@ -1,5 +1,5 @@
 # Common settings
 
-. ./configs/common/settings.sh
+. configs/common/settings.sh
 
 # Settings for production mode

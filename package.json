@@ -13,7 +13,7 @@
   "engines": {
     "node": ">=0.12"
   },
-  "devDependencies": {
+  "dependencies": {
     "enb": "^1.3.0",
     "bower": "^1.7.9",
     "enb-bem-i18n": "^1.1.1",
@@ -24,14 +24,23 @@
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.4.0"
   },
+  "devDependencies": {
+    "gemini": "^4.16.0",
+    "gemini-optipng": "^1.0.0",
+    "http-server": "^0.8.0"
+  },
   "scripts": {
-    "start": "enb server",
-    "postinstall": "npm run deps; npm run configs",
-    "deps": "bower install",
-    "configs": "rm -rf configs/current; ln -sf ${YENV:-development} configs/current; ln -sf configs/current/borschik .borschik",
-    "build": "enb make *.bundles/*",
-    "deploy": "./scripts/deploy.sh",
-    "clean": "./scripts/clean.sh"
+    "postinstall": "npm run deps; YENV=${YENV:-${NODE_ENV}} npm run configs",
+    "deps": "$(npm bin)/bower install",
+    "configs": ".scripts/yconf.sh reset",
+    "build": "YENV=${YENV:-$(.scripts/yconf.sh)} $(npm bin)/enb make *.bundles/*",
+    "start": "YENV=${YENV:-$(.scripts/yconf.sh)} $(npm bin)/enb server",
+    "gemini": "$(npm bin)/http-server -s & p=$!; $(npm bin)/gemini test --reporter html --reporter flat; e=$?; kill -TERM ${p}; exit ${e}",
+    "gemini-dist": "DIR=`mktemp -dt 'c2c'`; tar -xf $(cat .dist) -C ${DIR}; $(npm bin)/http-server ${DIR} -s & p=$!; $(npm bin)/gemini test --reporter html --reporter flat; e=$?; kill -TERM ${p}; rm -rf ${DIR}; exit ${e}",
+    "gemini-site": ".scripts/yconf.sh silent && . configs/current/settings.sh; BASEURL=${BASEURL} $(npm bin)/gemini test --reporter html --reporter flat",
+    "gemini-update": "$(npm bin)/http-server -c \"no-cache, no-store\" -s & p=$!; $(npm bin)/gemini update; kill -TERM ${p}",
+    "dist": ".scripts/dist.sh",
+    "clean": ".scripts/clean.sh"
   },
   "private": true
 }

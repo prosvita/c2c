@@ -1,12 +1,12 @@
 #!/bin/bash
 
-. ./scripts/common
+. .scripts/common.sh
 
 ### Settings
 
 RM="rm -rf"
 
-. ./configs/current/settings.sh
+. configs/current/settings.sh
 
 if [[ -z ${TECHS+x} || -z ${LANGS+x} || -z ${PLATFORMS+x} || -z ${PLATFORMSUFIX+x} ]]; then
     echo "one or more variables are undefined"
