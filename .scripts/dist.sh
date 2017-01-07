@@ -1,12 +1,12 @@
 #!/bin/bash
 
-. ./scripts/common
+. .scripts/common.sh
 
 ### Settings
 
 GIT="git"
 
-. ./configs/current/settings.sh
+. configs/current/settings.sh
 
 REVISION=$(TZ=EDT date '+%Y%m%dT%H%M%SEDT')
 

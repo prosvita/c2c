@@ -6,10 +6,11 @@ libs/
 
 # bem
 .enb/tmp/
-*.bundles*/*/*.*
-!*.bundles*/*/blocks/*
-!*.bundles*/*/*.bemjson.js
-!*.bundles*/*/*.md
+*.bundles/*/*.*
+!*.bundles/*/blocks/*
+!*.bundles/*/*.bemjson.js
+!*.bundles/*/*.gemini.js
+!*.bundles/*/*.md
 _/
 
 # symlinks
@@ -17,6 +18,10 @@ configs/current
 .borschik
 
 # deploy
+.dist
 sitemap.xml
 robots.txt
 *.gz
+
+# test
+gemini-report
