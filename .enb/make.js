@@ -9,6 +9,13 @@ module.exports = function (config) {
 
     config.setLanguages([ 'uk', 'crh', 'ru']);
 
+    /* технологія borschik не вміє заміняти {lang} в опції dependantFiles */
+    var htmlDependantFiles = [];
+    config.getLanguages().forEach((lang) => {
+        htmlDependantFiles.push('?.' + lang + '.min.css');
+        htmlDependantFiles.push('?.' + lang + '.min.js');
+    });
+
     config.nodes('*.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
@@ -56,7 +63,14 @@ module.exports = function (config) {
             // borschik
             [borschikTech, { source: '?.{lang}.css', target: '?.{lang}.min.css', freeze: true, minify: isProd }],
             [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
-            [borschikTech, { source: '?.{lang}.src.html', target: '?.{lang}.html', freeze: true, minify: isProd }],
+            /* html має мінімізуватись останнім */
+            [borschikTech, {
+                source: '?.{lang}.src.html',
+                target: '?.{lang}.html',
+                dependantFiles: htmlDependantFiles,
+                freeze: true,
+                minify: isProd
+            }],
         ]);
 
         nodeConfig.addTargets([
