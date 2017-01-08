@@ -18,8 +18,8 @@
     "bower": "^1.7.9",
     "enb-bem-i18n": "^1.1.1",
     "enb-bem-techs": "^2.2.1",
-    "enb-bemxjst": "^6.4.1",
-    "enb-bemxjst-i18n": "^1.0.0-beta3",
+    "enb-bemxjst": "^7.6.1",
+    "enb-bemxjst-i18n": "tadatuta/enb-bemxjst-i18n.git#bemtree-nextgen",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
     "enb-stylus": "^2.4.0"

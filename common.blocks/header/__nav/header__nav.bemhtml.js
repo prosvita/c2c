@@ -2,18 +2,18 @@ block('header')(
 
     elem('nav')(
         tag()('nav'),
-        content()(function(){
+        content()((node, ctx) => {
             return {
                 elem: 'menu',
-                content: this.ctx.content
+                content: ctx.content
             }
         })
     ),
 
     elem('menu')(
         tag()('ul'),
-        content()(function(){
-            return this.ctx.content.map(function(link){
+        content()((node, ctx) => {
+            return ctx.content.map((link) => {
                 return [{
                     elem: 'link',
                     link: link
@@ -24,12 +24,11 @@ block('header')(
 
     elem('link')(
         tag()('li'),
-        content()(function() {
+        content()((node, ctx) => {
             return {
                 block: 'link',
-                //mods: { pseudo: true },
-                url: this.ctx.link.url,
-                content: this.ctx.link.content
+                url: ctx.link.url,
+                content: ctx.link.content
             };
         })
     )
