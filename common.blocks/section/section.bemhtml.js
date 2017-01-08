@@ -1,19 +1,19 @@
 block('section')(
-    content()(function(){
+    content()((node, ctx) => {
         return [
             {
                 elem: 'head',
-                specific: this.ctx.specific,
-                level: this.ctx.level,
-                content: this.ctx.title
+                specific: ctx.specific,
+                level: ctx.level,
+                content: ctx.title
             },
             {
                 elem: 'anchor',
-                anchor: this.ctx.anchor
+                anchor: ctx.anchor
             },
             {
                 elem: 'container',
-                anchor: this.ctx.anchor,
+                anchor: ctx.anchor,
                 content: applyNext()
             }
         ];
@@ -21,14 +21,14 @@ block('section')(
 
     elem('anchor')(
         tag()(false),
-        match(function(){ return this.ctx.anchor; })(
+        match((node, ctx) => { return ctx.anchor; })(
             tag()('a'),
-            attrs()(function(){ return { name: this.ctx.anchor }; } )
+            attrs()((node, ctx) => { return { name: ctx.anchor }; } )
         )
     ),
 
     elem('container')(
-        match(function(){ return ! this.ctx.anchor; })(
+        match((node, ctx) => { return !ctx.anchor; })(
             mix()({ elemMods: {'anchor': 'no'} })
         )
     ),

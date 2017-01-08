@@ -2,14 +2,12 @@ block('header')(
 
     elem('langs')(
         tag()('ul'),
-        content()(function(){
-            var bundle = this.ctx.bundle;
-
-            return this.ctx.content.map(function(lang){
+        content()((node, ctx) => {
+            return ctx.content.map((lang) => {
                 return [{
                     elem: 'lang',
                     lang: lang,
-                    bundle: bundle
+                    bundle: ctx.bundle
                 }]
             });
         })
@@ -17,17 +15,16 @@ block('header')(
 
     elem('lang')(
         tag()('li'),
-        content()(function(){
+        content()((node, ctx) => {
             return {
                 block: 'link',
-                // mods: { pseudo: true },
-                url: this.ctx.lang.url + '/' + this.ctx.bundle,   //FIXIT: Повний url (`/{this.ctx.lang}/{bundleName}.html`)
-                content: this.ctx.lang.content  //FIXIT: this.i18n('header', this.ctx.lang)
+                url: ctx.lang.url + '/' + ctx.bundle,   //FIXIT: Повний url (`/{ctx.lang}/{bundleName}.html`)
+                content: ctx.lang.content  //FIXIT: node.i18n('header', ctx.lang)
             };
         }),
 
-        //FIXIT: Переробити на regexp this.ctx.url =~ m/^\/{this.ctx.lang}\//
-        match(function(){ return this.ctx.lang.url === '/' + this.i18n('page', 'lang'); })(
+        //FIXIT: Переробити на regexp ctx.url =~ m/^\/{ctx.lang}\//
+        match((node, ctx) => { return ctx.lang.url === '/' + node.i18n('page', 'lang'); })(
             mix()([{ elemMods: { current: true } }])
         )
     )

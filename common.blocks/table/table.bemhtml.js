@@ -1,16 +1,16 @@
 block('table')(
     tag()('table'),
     elem('head')(
-        def()(function() {
+        def()(() => {
             return applyNext({
                 head: true
             });
         }),
         tag()(false),
-        content()(function() {
+        content()((node, ctx) => {
             return {
                 elem: 'row',
-                content: this.ctx.content
+                content: ctx.content
             };
         })
     ),
@@ -20,8 +20,8 @@ block('table')(
         bem()(false)
     ),
     elem('cell')(
-        tag()(function() {
-            return this.head ? 'th' : 'td';
+        tag()((node) => {
+            return node.head ? 'th' : 'td';
         }),
         attrs()({
             scope: 'col'

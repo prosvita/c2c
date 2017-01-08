@@ -2,33 +2,33 @@ block('section')(
 
     elem('head')(
 
-        mix()(function(){
+        mix()((node, ctx) => {
             return [
                 { elem: 'cover' },
-                { elem: 'specific', mods: { height: this.ctx.specific } }
+                { elem: 'specific', elemMods: { height: ctx.specific } }
             ];
         }),
 
-        content()(function(){
+        content()((node, ctx) => {
             return [
                 {
                     elem: 'image',
                     mix: [
-                        { elem: 'specific', mods: { height: this.ctx.specific } },
-                        { elem: 'specific', mods: { background: this.ctx.specific } }
+                        { elem: 'specific', elemMods: { height: ctx.specific } },
+                        { elem: 'specific', elemMods: { background: ctx.specific } }
                     ]
                 },
                 {
                     elem: 'fog',
-                    mix: { elem: 'specific', mods: { height: this.ctx.specific } }
+                    mix: { elem: 'specific', elemMods: { height: ctx.specific } }
                 },
                 {
                     elem: 'title',
                     content: {
                         elem: 'heading',
-                        mods: { level: this.ctx.level },
-                        mix: { elem: 'specific', mods: { height: this.ctx.specific } },
-                        content: this.ctx.content
+                        elemMods: { level: ctx.level },
+                        mix: { elem: 'specific', elemMods: { height: ctx.specific } },
+                        content: ctx.content
                     }
                 }
             ];
