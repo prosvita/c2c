@@ -22,7 +22,7 @@
     "enb-bemxjst-i18n": "tadatuta/enb-bemxjst-i18n.git#bemtree-nextgen",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
-    "enb-markdown": "0.0.1",
+    "enb-markdown": "0.0.2",
     "enb-stylus": "^2.4.0"
   },
   "devDependencies": {

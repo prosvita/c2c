@@ -36,13 +36,13 @@ fi
 
 ### Generate Sitemap
 
-if [[ -n ${SCHEME+x} && -n ${HOST+x} && -n ${TARGETTECH+x} ]]; then
+if [[ -n ${SCHEME+x} && -n ${HOST+x} && -n ${SOURCEDIR+x} && -n ${SOURCETECH+x} ]]; then
     urls=()
     for lang in ${LANGS}; do
-        fill_langs targettechs "${TARGETTECH}" "${lang}"
+        fill_langs targettechs "${SOURCETECH}" "${lang}"
         for bundle in ${bundles[*]}; do
-            get_tehcs_files page "${bundle}" "${PLATFORMS}" "${PLATFORMSUFIX}" "${targettechs}"
-            lastmod=$(${GIT} log -n 1 --pretty=format:%cI -- ${page})
+            get_tehcs_files doc "${bundle}" "${SOURCEDIR}" "" "${targettechs}"
+            lastmod=$(${GIT} log -n 1 --pretty=format:%cI -- ${doc})
             [[ "${bundle}" == "index" ]] && bundle="" || bundle="/${bundle}"
             urls[${#urls[*]}]="
    <url>

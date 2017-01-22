@@ -8,6 +8,6 @@ unset FREEZE
 unset COMPRESS_EXT
 unset HOST
 
-TARGETS='blocks ?.{lang}.min.css ?.{lang}.min.js ?.{lang}.html'
+TARGETS='blocks ?.min.css ?.{lang}.min.js ?.{lang}.html'
 TARBALL_NAME="c2c-dev"
 ROOT_REMOVE=".enb/tmp"

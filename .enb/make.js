@@ -9,25 +9,25 @@ module.exports = function (config) {
 
     config.setLanguages([ 'uk', 'crh', 'ru']);
 
-    /* технологія borschik не вміє заміняти {lang} в опції dependantFiles */
-    var htmlDependantFiles = [];
-    config.getLanguages().forEach((lang) => {
-        htmlDependantFiles.push('?.' + lang + '.min.css');
-        htmlDependantFiles.push('?.' + lang + '.min.js');
-    });
-
     config.nodes('*.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
-            [fileProvideTech, { target: '?.{lang}.bemjson.js' }],
-            [enbBemTechs.bemjsonToBemdecl, { source: '?.{lang}.bemjson.js', target: '?.{lang}.bemdecl.js' }],
-            [enbBemTechs.deps, { target: '?.{lang}.deps.js', bemdeclFile: '?.{lang}.bemdecl.js' }],
-            [enbBemTechs.files, { filesTarget: '?.{lang}.files', dirsTarget: '?.{lang}.dirs', depsFile: '?.{lang}.deps.js' }],
+            [fileProvideTech, { target: '?.bemdecl.js' }],
+            [enbBemTechs.deps],
+            [enbBemTechs.files], // for css
+            [enbBemTechs.files, { filesTarget: '?.{lang}.files', dirsTarget: '?.{lang}.dirs' }],
 
             // keyset files for each language
             [keysetsTech, { lang: '{lang}', filesTarget: '?.{lang}.files', dirsTarget: '?.{lang}.dirs' }],
             // i18n files for each language
             [i18nTech, { lang: '{lang}' }],
+
+            // bemtree
+            [require('enb-bemxjst-i18n/techs/bemtree-i18n'), {
+                filesTarget: '?.{lang}.files',
+                lang: '{lang}',
+                devMode: process.env.BEMHTML_ENV === 'development'
+            }],
 
             // bemhtml
             [require('enb-bemxjst-i18n/techs/bemhtml-i18n'), {
@@ -36,11 +36,23 @@ module.exports = function (config) {
                 devMode: process.env.BEMHTML_ENV === 'development'
             }],
 
+            // markdown
+            [require('enb-markdown/techs/markdown'), {
+                target: '?.{lang}.markdown',
+                sourceSuffixes: '{lang}.markdown',
+                filesTarget: '?.{lang}.files'
+            }],
+
             // html
-            [require('enb-bemxjst/techs/bemjson-to-html'), {
-                bemjsonFile: '?.{lang}.bemjson.js',
-                bemhtmlFile: '?.bemhtml.{lang}.js',
-                target: '?.{lang}.src.html'
+            [require('enb-markdown/techs/markdown-to-html'), {
+                target: '?.{lang}.src.html',
+                markdown: '?.{lang}.markdown',
+                bemtree: '?.bemtree.{lang}.js',
+                bemhtml: '?.bemhtml.{lang}.js',
+                requireJs: '?.{lang}.min.js',
+                markdownBemjsonOptions: {
+                    rules: require('./rules/markdown')
+                }
             }],
 
             // browser.js
@@ -55,32 +67,30 @@ module.exports = function (config) {
                 lang: '{lang}'
             }],
 
-            // css
-//            sources: nodeConfig.getLanguages().forEach(function(lang){
-//                return '?.' + lang + '.bemdecl.js';
-//            })
-
             // borschik
-            [borschikTech, { source: '?.{lang}.css', target: '?.{lang}.min.css', freeze: true, minify: isProd }],
+            [borschikTech, { source: '?.css', target: '?.min.css', freeze: true, minify: isProd }],
             [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
             /* html має мінімізуватись останнім */
             [borschikTech, {
                 source: '?.{lang}.src.html',
                 target: '?.{lang}.html',
-                dependantFiles: htmlDependantFiles,
+                /* технологія borschik не вміє заміняти {lang} в опції dependantFiles */
+                dependantFiles: ['?.min.css'].concat(
+                    config.getLanguages().map(lang => '?.' + lang + '.min.js')
+                ),
                 freeze: true,
                 minify: isProd
             }],
         ]);
 
         nodeConfig.addTargets([
-            '?.{lang}.min.css',
+            '?.min.css',
             '?.{lang}.min.js',
             '?.{lang}.html'
         ]);
     });
 
-    config.nodes('*desktop.bundles/*', function (nodeConfig) {
+    config.nodes('desktop.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, {
@@ -90,15 +100,14 @@ module.exports = function (config) {
                     { path: 'libs/bem-components/common.blocks', check: false },
                     { path: 'libs/bem-components/desktop.blocks', check: false },
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
+                    'articles',
                     'common.blocks',
                     'desktop.blocks'
                 ]
             }],
             // css
-            //TODO: Підтримати '?.{lang}.ie.css'
+            //TODO: Підтримати '?.ie.css'
             [require('enb-stylus/techs/stylus'), {
-                filesTarget: '?.{lang}.files',
-                target: '?.{lang}.css',
                 sourcemap: false,
 //                autoprefixer: {
 //                    browsers: [

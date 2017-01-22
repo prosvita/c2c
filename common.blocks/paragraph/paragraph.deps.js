@@ -1,7 +1,6 @@
 ({
-    mustDeps: ['i18n'],
+    mustDeps: { block: 'variables' },
     shouldDeps: [
-        { elem: 'lang' },
         { block: 'link' }
     ]
 })

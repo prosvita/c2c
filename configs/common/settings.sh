@@ -3,10 +3,12 @@
 PLATFORMS="desktop touch-pad touch-phone"
 PLATFORMSUFIX=".bundles"
 TARGETS='?.{lang}.html'
-TECHS='blocks ?.bemjson.js ?.{lang}.bemjson.js ?.gemini.js ?.{lang}.md'
+TECHS='blocks ?.bemdecl.js ?.gemini.js'
 FREEZE="_"
 
-TARGETTECH='?.{lang}.bemjson.js'
+SOURCEDIR="articles"
+SOURCETECH='?.{lang}.markdown'
+
 COMPRESS_EXT="css js svg xml"
 
 ROOT_REMOVE="${FREEZE} .enb/tmp .borschik configs/current libs node_modules robots.txt sitemap.xml*"
