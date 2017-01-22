@@ -43,8 +43,8 @@ npm run gemini-dist
 Встановлення залежностей:
 
 ```bash
-sudo npm install -g selenium-standalone
-sudo selenium-standalone install
+npm install -g selenium-standalone
+selenium-standalone install
 ```
 
 Запуск Selenium Server у окремому терміналі для запуску тестів в локальних браузерах:
