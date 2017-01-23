@@ -24,6 +24,7 @@ module.exports = function (config) {
 
             // bemtree
             [require('enb-bemxjst-i18n/techs/bemtree-i18n'), {
+                sourceSuffixes: ['bemtree', 'bemtree.js'],
                 filesTarget: '?.{lang}.files',
                 lang: '{lang}',
                 devMode: process.env.BEMHTML_ENV === 'development'
@@ -31,6 +32,7 @@ module.exports = function (config) {
 
             // bemhtml
             [require('enb-bemxjst-i18n/techs/bemhtml-i18n'), {
+                sourceSuffixes: ['bemhtml', 'bemhtml.js'],
                 filesTarget: '?.{lang}.files',
                 lang: '{lang}',
                 devMode: process.env.BEMHTML_ENV === 'development'
@@ -102,7 +104,8 @@ module.exports = function (config) {
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
                     'articles',
                     'common.blocks',
-                    'desktop.blocks'
+                    'desktop.blocks',
+                    'configs/current/blocks'
                 ]
             }],
             // css

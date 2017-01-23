@@ -37,6 +37,9 @@ block('page').content()((node, ctx) => {
         },
         {
             block: 'footer'
+        },
+        {
+            block: 'counters'
         }
     ];
 });
