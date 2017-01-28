@@ -1,16 +1,42 @@
 module.exports = {
-    html(html, addData) {
+    html(html, rootCtx) {
         function parsePageMetadata(data) {
             var result;
 
             if (result = data.match(/^NAVIGATION:\s*(.*)$/)) {
                 let nav = result[1].replace(/\s$/g, '');
-                addData({
-                    nav: {
-                        url: nav.substr(0, nav.indexOf(' ')),
-                        content: nav.substr(nav.indexOf(' ') + 1)
+                rootCtx.pushToRootCtx('navigation', {
+                    url: nav.substr(0, nav.indexOf(' ')),
+                    content: nav.substr(nav.indexOf(' ') + 1)
+                });
+                return true;
+            }
+
+            if (result = data.match(/^META:(\w*)\s+(.*)$/)) {
+                rootCtx.pushToRootCtx('head', {
+                    elem: 'meta',
+                    attrs: {
+                        name: result[1],
+                        content: result[2].replace(/\s$/g, '')
                     }
                 });
+
+                rootCtx.setInRootCtx('og.' + result[1], result[2].replace(/\s$/g, ''), false);
+                return true;
+            }
+
+            if (result = data.match(/^OG:(\w*)\s+(.*)$/)) {
+                rootCtx.setInRootCtx('og.' + result[1], result[2].replace(/\s$/g, ''), false);
+                return true;
+            }
+
+            if (result = data.match(/^OG:fb:(\w*)\s+(.*)$/)) {
+                rootCtx.setInRootCtx('og.fb.' + result[1], result[2].replace(/\s$/g, ''), false);
+                return true;
+            }
+
+            if (result = data.match(/^OG:twitter:(\w*)\s+(.*)$/)) {
+                rootCtx.setInRootCtx('og.tw.' + result[1], result[2].replace(/\s$/g, ''), false);
                 return true;
             }
 
@@ -26,6 +52,12 @@ module.exports = {
 
             if (arg = element.match(/^<!--\s*(.*)\s*-->$/)) {
                 if (parsePageMetadata(arg[1])) {
+                    return '';
+                }
+
+                if (element.match(/^\n+$/)
+                    || element.match(/^<!-- begin:.+$/)
+                    || element.match(/^<!-- end:.+$/)) {
                     return '';
                 }
             }
@@ -44,7 +76,11 @@ module.exports = {
         return html;
     },
 
-    heading(text, level) {
+    heading(text, level, raw, rootCtx) {
+        if (level === 1) {
+            rootCtx.setInRootCtx('title', raw, false);
+        }
+
         return {
             block: 'head',
             mods: { level: level },

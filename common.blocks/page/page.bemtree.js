@@ -1,10 +1,12 @@
 block('page').content()((node, ctx) => {
-    const nav = [];
-    ctx.data.forEach(item => {
-        if (item.nav) {
-            nav.push(item.nav);
-        }
-    });
+
+    if (ctx.og) {
+        ctx.og.title = ctx.title;
+        ctx.head.push({
+            elem: 'og',
+            og: ctx.og
+        });
+    }
 
     return [
         {
@@ -15,7 +17,7 @@ block('page').content()((node, ctx) => {
                 },
                 {
                     elem: 'nav',
-                    content: nav
+                    content: ctx.navigation
                 },
                 {
                     elem: 'langs',
