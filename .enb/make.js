@@ -100,7 +100,6 @@ module.exports = function (config) {
                     { path: 'libs/bem-core/common.blocks', check: false },
                     { path: 'libs/bem-core/desktop.blocks', check: false },
                     { path: 'libs/bem-components/common.blocks', check: false },
-                    { path: 'libs/bem-components/desktop.blocks', check: false },
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
                     'articles',
                     'common.blocks',
@@ -123,6 +122,50 @@ module.exports = function (config) {
 //                        '> 2%'
 //                    ]
 //                }
+            }]
+        ]);
+    });
+
+    config.nodes('touch-pad.bundles/*', function (nodeConfig) {
+        nodeConfig.addTechs([
+            // essential
+            [enbBemTechs.levels, {
+                levels: [
+                    { path: 'libs/bem-core/common.blocks', check: false },
+                    { path: 'libs/bem-core/touch.blocks', check: false },
+                    { path: 'libs/bem-components/common.blocks', check: false },
+                    { path: 'libs/bem-stat-counters/common.blocks', check: false },
+                    'articles',
+                    'common.blocks',
+                    'touch-pad.blocks',
+                    'configs/current/blocks'
+                ]
+            }],
+            // css
+            [require('enb-stylus/techs/stylus'), {
+                sourcemap: false,
+            }]
+        ]);
+    });
+
+    config.nodes('touch-phone.bundles/*', function (nodeConfig) {
+        nodeConfig.addTechs([
+            // essential
+            [enbBemTechs.levels, {
+                levels: [
+                    { path: 'libs/bem-core/common.blocks', check: false },
+                    { path: 'libs/bem-core/touch.blocks', check: false },
+                    { path: 'libs/bem-components/common.blocks', check: false },
+                    { path: 'libs/bem-stat-counters/common.blocks', check: false },
+                    'articles',
+                    'common.blocks',
+                    'touch-phone.blocks',
+                    'configs/current/blocks'
+                ]
+            }],
+            // css
+            [require('enb-stylus/techs/stylus'), {
+                sourcemap: false,
             }]
         ]);
     });
