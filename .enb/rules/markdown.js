@@ -183,5 +183,23 @@ module.exports = {
         }
 
         return result;
+    },
+
+    em(text) {
+        return {
+            block: 'content',
+            elem: 'em',
+            tag: 'em',
+            content: text
+        };
+    },
+
+    br() {
+        return {
+            block: 'content',
+            elem: 'br',
+            tag: 'br',
+            bem: false
+        };
     }
 };

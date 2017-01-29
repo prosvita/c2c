@@ -27,7 +27,7 @@
 |[Крымтелеком](http://ktkru.ru/)|36,58 руб/мин<sup><small>*</small></sup>|36,58 руб/мин<sup><small>*</small></sup>|
 |[Skype](https://skype.com)|20 ¢/мин|10 ¢/мин|
 
-<sup><small>*</small></sup> Отсутствует гарантия возможности совершения вызовов.
+<sup><small>*</small></sup> *Отсутствует гарантия возможности совершения вызовов.*
 
 В большинстве случаев позвонить в Крым возможно только на номера МТС:
 
@@ -36,6 +36,7 @@
 |[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/мин| — |
 |[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 грн/мин|5 грн/мин<sup><small>*</small></sup>|
 |[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 грн/мин|5 грн/мин<sup><small>*</small></sup>|
+|[МТС Украина](http://www.mts.ua/ru/), «[Безлимит за границу](http://www.mts.ua/ru/mobile/mezhdunarodnaya-svyaz/contract/bezlimit-za-granicu/)»|0 грн/мин<sup><small>\*\*</small></sup>| — |
 |[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 грн/мин|11 грн/мин<sup><small>*</small></sup>|
 |[Lifecell](http://www.lifecell.ua/ru/), «[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)»|2,86 грн/мин|0,73 грн/мин<sup><small>*</small></sup>|
 |[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 грн/мин|20 грн/мин<sup><small>*</small></sup>|
@@ -43,7 +44,8 @@
 |[Viber Out](https://account.viber.com/ru/)|9,5 ¢/мин|2,3 ¢/мин|
 |[Skype](https://secure.skype.com/ru/calling-rates?wt.mc_id=revamp&expo365=empty)|10 ¢/мин|2,3 ¢/мин|
 
-<sup><small>*</small></sup> Отсутствует гарантия возможности совершения вызовов.
+<sup><small>\*</small></sup> *Отсутствует гарантия возможности совершения вызовов.*  
+<sup><small>\*\*</small></sup> *35 грн/месяц на 3 номера.*
 
 Нужно помнить: при звонках на мобильный номер в Крыму со счета его владельца также могут сниматься средства за каждую минуту разговора.
 
