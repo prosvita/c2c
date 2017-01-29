@@ -1,5 +1,6 @@
 module.exports = {
     page: {
-        lang: 'ru'
+        lang: 'ru',
+        locale: 'ru_RU'
     }
 };

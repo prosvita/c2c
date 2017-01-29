@@ -8,7 +8,7 @@ libs/
 .enb/tmp/
 *.bundles/*/*.*
 !*.bundles/*/blocks/*
-!*.bundles/*/*.bemjson.js
+!*.bundles/*/*.bemdecl.js
 !*.bundles/*/*.gemini.js
 !*.bundles/*/*.md
 _/
