@@ -6,9 +6,8 @@ location = / {
 }
 
 location ~ ^/(?<lang>(uk|crh|ru)) {
-
     rewrite ^/\w+/?(\?.*)?$ /$lang/call/$1 permanent;
-    rewrite ^/\w+/([\w-]+)/?(\?.*)?$ /desktop.bundles/$1/$1.$lang.html$2 last;
+    rewrite ^/\w+/(?<page>[\w-]+)/?(\?.*)?$ /$ua_device.bundles/$page/$page.$lang.html$2 last;
 }
 
 location /_/ {
@@ -17,6 +16,6 @@ location /_/ {
 }
 
 location = /favicon.ico {
-    alias /var/www/c2c-beta/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
+    alias /var/www/c2c/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
     access_log off;
 }
