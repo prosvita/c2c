@@ -1,16 +1,16 @@
-var enbBemTechs = require('enb-bem-techs'),
+const enbBemTechs = require('enb-bem-techs'),
     i18nTech  = require('enb-bem-i18n/techs/i18n'),
     keysetsTech = require('enb-bem-i18n/techs/keysets'),
     fileProvideTech = require('enb/techs/file-provider'),
     fileCopyTech = require('enb/techs/file-copy'),
     borschikTech = require('enb-borschik/techs/borschik');
 
-module.exports = function (config) {
-    var isProd = process.env.YENV === 'production';
+module.exports = config => {
+    const isProd = process.env.YENV === 'production';
 
     config.setLanguages([ 'uk', 'crh', 'ru']);
 
-    config.nodes('*.bundles/*', function (nodeConfig) {
+    config.nodes('*.bundles/*', nodeConfig => {
         nodeConfig.addTargets([
             '?.min.css',
             '?.{lang}.min.js',
@@ -79,7 +79,7 @@ module.exports = function (config) {
     });
 
     // технології, що залежать від платформи
-    config.nodes('desktop.bundles/*', function (nodeConfig) {
+    config.nodes('desktop.bundles/*', nodeConfig => {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, {
@@ -113,7 +113,7 @@ module.exports = function (config) {
         ]);
     });
 
-    config.nodes('touch-pad.bundles/*', function (nodeConfig) {
+    config.nodes('touch-pad.bundles/*', nodeConfig => {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, {
@@ -136,7 +136,7 @@ module.exports = function (config) {
         ]);
     });
 
-    config.nodes('touch-phone.bundles/*', function (nodeConfig) {
+    config.nodes('touch-phone.bundles/*', nodeConfig => {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, {
@@ -160,8 +160,8 @@ module.exports = function (config) {
     });
 
     // технології, що залежать від середовища
-    config.mode('development', function () {
-        config.nodes('*.bundles/*', function (nodeConfig) {
+    config.mode('development', () => {
+        config.nodes('*.bundles/*', nodeConfig => {
             nodeConfig.addTechs([
                 [fileCopyTech, { source: '?.css', target: '?.min.css' }],
                 [fileCopyTech, { source: '?.{lang}.js', target: '?.{lang}.min.js' }],
@@ -170,9 +170,9 @@ module.exports = function (config) {
         });
     });
 
-    ['testing', 'production'].forEach(function (mode) {
-        config.mode(mode, function () {
-            config.nodes('*.bundles/*', function (nodeConfig) {
+    ['testing', 'production'].forEach(mode => {
+        config.mode(mode, () => {
+            config.nodes('*.bundles/*', nodeConfig => {
                 nodeConfig.addTechs([
                     // borschik
                     [borschikTech, { source: '?.css', target: '?.min.css', freeze: true, minify: isProd }],
