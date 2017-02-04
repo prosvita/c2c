@@ -1,1 +1,1 @@
-({ mustDeps: { block : 'variables' } })
+({ mustDeps: { block: 'variables' } })

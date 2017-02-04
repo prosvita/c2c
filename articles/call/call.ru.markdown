@@ -68,10 +68,10 @@
 
 |Сравнение возможностей|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/home)|[Zadarma](https://zadarma.com/ru)|
 |:--|:--:|:--:|:--:|:--:|
-|Городской номер| да | нет | нет | [дополнительная услуга](https://zadarma.com/ru/services/numbers/) |
+|Городской номер| да | нет | нет | [доп. услуга](https://zadarma.com/ru/services/numbers/) |
 |Регистрация номера через интернет| да | [ограничено](http://my.ukrtelecom.ua/ua/group_ip/snsipphone/getting_started/) | [да](https://atelecom.biz/rus/start-packs) | [да](https://my.zadarma.com/registration/?language=ru) |
 |Оплата через Visa и MasterCard| да | нет | да | [да](https://zadarma.com/ru/topup/choose/) |
-|Предоплата| дополнительная услуга | нет | да | да |
+|Предоплата| доп. услуга | нет | да | да |
 
 Выбор оператора и услуги зависит от потребностей и возможностей.
 

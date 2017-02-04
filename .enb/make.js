@@ -90,6 +90,7 @@ module.exports = config => {
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
                     'articles',
                     'common.blocks',
+                    'deskpad.blocks',
                     'desktop.blocks',
                     'configs/current/blocks'
                 ]
@@ -124,6 +125,7 @@ module.exports = config => {
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
                     'articles',
                     'common.blocks',
+                    'deskpad.blocks',
                     'touch.blocks',
                     'touch-pad.blocks',
                     'configs/current/blocks'

@@ -1,0 +1,32 @@
+$sizes = {
+    s: { side: 32px, indent: 4px },
+    l: { side: 45px, indent: 15px }
+}
+
+.header__menu
+    display table-cell
+
+    .ua_svg_yes &-img
+        background url(header__menu.min.svg) no-repeat
+        background-size contain
+
+    for $size, $val in $sizes
+        &-img
+            &_size_{$size}
+                width: $val['side']
+                height: $val['side']
+                margin: $val['indent']
+
+            .ua_svg_no &&_size_{$size}
+                background: url('header__menu_size_'+$size+'.png') no-repeat
+
+    & .link:focus
+        outline none
+
+    .popup > &-container
+        position absolute
+
+    for $size, $val in $sizes
+        .popup > &-container_size_{$size}
+            top: ($val['side'] + $val['indent'] * 2)
+            right: -($val['side'] + $val['indent'] * 2)

@@ -47,7 +47,7 @@ module.exports = {
             let arg;
 
             if (element === '<social/>') {
-                return { block: 'ya-share2' };
+                return { block: 'ya-share2', mix: { block: 'content', elem: 'object' } };
             }
 
             if (arg = element.match(/^<!--\s*(.*)\s*-->$/)) {
@@ -122,10 +122,7 @@ module.exports = {
     table(header, body) {
         const result = {
             block: 'table',
-            mix: [
-                { block: 'content', elem: 'paragraph' },
-                { mods: { gap: 'm' } }
-            ],
+            mix: { block: 'content', elem: 'object' },
             content: []
         };
 

@@ -1,1 +1,1 @@
-({ shouldDeps: { block : 'ua', elem : 'svg' } })
+({ shouldDeps: { block: 'ua', elem: 'svg' } })
