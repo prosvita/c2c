@@ -1,6 +1,6 @@
 # Qırım ile alâqa
-<!-- META:description Все способы связи с Крымом. Мы сравнили популярные тарифы связи для того, чтоб Вы выбрали доступный способ общения с вашими родственниками, друзьями и партнерами. -->
-<!-- META:keywords позвонить в Крым с Украины, звонить в Крым, звонки в Крым, звонить из Крыма в Украину, позвонить из Крыма в Киев, позвонить в Украину, звонить в Украину, связь с Крымом, украинский номер в Крыму, украинский телефон в Крыму, ip-телефон в Крыму, интернет-телефон у Крыму, коды городов в Крыму -->
+<!-- META:description Qırım ile alâqanıñ bütün çareleri. Sizge soy-sop, dost, ortaqlarıñıznen qonuşuvnıñ eñ oñaytlı usulını saylamağa yardım etmek içün populâr alâqa tariflerini teñeştirdik. -->
+<!-- META:keywords Ukrainadan Qırımğa telefon etmek, Ukrainadan Qırımğa telefon açmaq, Qırımğa telefon etmek, Qırımğa telefon açmaq, Qırımğa telefon etüvler, Qırımdan Ukrainağa telefon etmek, Qırımdan Ukrainağa telefon açmaq, Qırımdan Kiyevge telefon etmek, Qırımdan Kiyevge telefon açmaq, Ukrainağa telefon etmek, Ukrainağa telefon açmaq, Qırım ile alâqa, Qırımda ukrain telefon nomerası, Qırımda ukrain telefonı, Qırımda ip telefonı, Qırımda internet-telefon, Qırımdaki şeerlerniñ kodları -->
 <!-- NAVIGATION:#quickly Acele telefon etmek -->
 <!-- NAVIGATION:#permanently Muntazam sürette telefon etmek -->
 
