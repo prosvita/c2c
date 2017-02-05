@@ -24,23 +24,23 @@
 | Оператор, Тариф | На мобильные | На городские телефоны |
 |:--|:--:|:--:|
 |[МТС](http://www.kuban.mts.ru/), «[Супер МТС](http://www.kuban.mts.ru/mob_connect/tariffs/tariffs/supermts/)»|20 руб/мин|20 руб/мин|
-|[Крымтелеком](http://ktkru.ru/)|36,58 руб/мин<sup><small>*</small></sup>|36,58 руб/мин<sup><small>*</small></sup>|
+|[Крымтелеком](http://ktkru.ru/)|36,58 руб/мин<sup><small>\*</small></sup>|36,58 руб/мин<sup><small>\*</small></sup>|
 |[Skype](https://skype.com)|20 ¢/мин|10 ¢/мин|
 
-<sup><small>*</small></sup> *Отсутствует гарантия возможности совершения вызовов.*
+<sup><small>\*</small></sup> *Отсутствует гарантия возможности совершения вызовов.*
 
 В большинстве случаев позвонить в Крым возможно только на номера МТС:
 
 | Оператор, Тариф | На МТС (+7) | На городские телефоны |
 |:--|:--:|:--:|
 |[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/мин| — |
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 грн/мин|5 грн/мин<sup><small>*</small></sup>|
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 грн/мин|5 грн/мин<sup><small>*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 грн/мин|5 грн/мин<sup><small>\*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 грн/мин|5 грн/мин<sup><small>\*</small></sup>|
 |[МТС Украина](http://www.mts.ua/ru/), «[Безлимит за границу](http://www.mts.ua/ru/mobile/mezhdunarodnaya-svyaz/contract/bezlimit-za-granicu/)»|0 грн/мин<sup><small>\*\*</small></sup>| — |
-|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 грн/мин|11 грн/мин<sup><small>*</small></sup>|
-|[Lifecell](http://www.lifecell.ua/ru/), «[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)»|2,86 грн/мин|0,73 грн/мин<sup><small>*</small></sup>|
-|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 грн/мин|20 грн/мин<sup><small>*</small></sup>|
-|[Киевстар](http://www.kyivstar.ua), «[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)»|1,5 грн/мин|1,5 грн/мин<sup><small>*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 грн/мин|11 грн/мин<sup><small>\*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/), «[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)»|2,86 грн/мин|0,73 грн/мин<sup><small>\*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 грн/мин|20 грн/мин<sup><small>\*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua), «[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)»|1,5 грн/мин|1,5 грн/мин<sup><small>\*</small></sup>|
 |[Viber Out](https://account.viber.com/ru/)|9,5 ¢/мин|2,3 ¢/мин|
 |[Skype](https://secure.skype.com/ru/calling-rates?wt.mc_id=revamp&expo365=empty)|10 ¢/мин|2,3 ¢/мин|
 
@@ -68,10 +68,10 @@
 
 |Сравнение возможностей|[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/home)|[Zadarma](https://zadarma.com/ru)|
 |:--|:--:|:--:|:--:|:--:|
-|Городской номер| да | нет | нет | [дополнительная услуга](https://zadarma.com/ru/services/numbers/) |
+|Городской номер| да | нет | нет | [доп. услуга](https://zadarma.com/ru/services/numbers/) |
 |Регистрация номера через интернет| да | [ограничено](http://my.ukrtelecom.ua/ua/group_ip/snsipphone/getting_started/) | [да](https://atelecom.biz/rus/start-packs) | [да](https://my.zadarma.com/registration/?language=ru) |
 |Оплата через Visa и MasterCard| да | нет | да | [да](https://zadarma.com/ru/topup/choose/) |
-|Предоплата| дополнительная услуга | нет | да | да |
+|Предоплата| доп. услуга | нет | да | да |
 
 Выбор оператора и услуги зависит от потребностей и возможностей.
 

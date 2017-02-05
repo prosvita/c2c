@@ -1,6 +1,10 @@
+$sizes = {
+    s: { side: 32px, indent: 4px },
+    l: { side: 45px, indent: 15px }
+}
+
 .header
     width 100%
-    height 75px
     position fixed
     z-index 990
     top 0
@@ -12,3 +16,11 @@
     -moz-transition background-color 300ms linear
     -webkit-transition background-color 300ms linear
     display table
+
+    &__nop
+        display table-cell
+        width 100%
+
+    for $size, $val in $sizes
+        &_size_{$size}
+            height: ($val['side'] + $val['indent'] * 2)

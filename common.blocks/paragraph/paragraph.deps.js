@@ -1,6 +1,1 @@
-({
-    mustDeps: { block: 'variables' },
-    shouldDeps: [
-        { block: 'link' }
-    ]
-})
+({ mustDeps: { block: 'variables' } })

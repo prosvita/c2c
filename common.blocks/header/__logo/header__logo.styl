@@ -1,14 +1,22 @@
+$sizes = {
+    s: { side: 32px, indent: 4px, x: 105px, y: 63px },
+    l: { side: 45px, indent: 15px, x: 175px, y: 105px }
+}
+
 .header__logo
-    width 175px
-    height 75px
 
-.header__logo-img
-    width 175px
-    height 105px
+    .ua_svg_yes &-img
+        background url(header__logo.min.svg) no-repeat
+        background-size contain
 
-.ua_svg_yes .header__logo-img
-    background url(header__logo.min.svg) no-repeat
-    background-size contain
+    for $size, $val in $sizes
+        &_size_{$size}
+            width: $val['x']
+            height: ($val['side'] + $val['indent'] * 2)
 
-.ua_svg_no .header__logo-img
-    background url(header__logo.png) no-repeat
+        &-img_size_{$size}
+            width: $val['x']
+            height: $val['y']
+
+            .ua_svg_no &
+                background: url('header__logo_size_'+$size+'.png') no-repeat

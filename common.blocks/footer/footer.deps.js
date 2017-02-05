@@ -4,7 +4,6 @@
         { block : 'variables' }
     ],
     shouldDeps: [
-//        { block: 'clearfix' },
         { block: 'link' }
     ]
 })

@@ -24,23 +24,23 @@ Bu alâqa sizge kelişmese, Qırımda aşağıda kösterilgen operatorlarnıñ h
 | Operator, Tarif | Cep telefonğa | Yerli telefonğa |
 |:--|:--:|:--:|
 |[МТС](http://www.kuban.mts.ru/), "[Супер МТС](http://www.kuban.mts.ru/mob_connect/tariffs/tariffs/supermts/)"|20 ₽/daqqada|20 ₽/daqqada|
-|[Крымтелеком](http://ktkru.ru/)|36,58 ₽/daqqada<sup><small>*</small></sup>|36,58 ₽/daqqada<sup><small>*</small></sup>|
+|[Крымтелеком](http://ktkru.ru/)|36,58 ₽/daqqada<sup><small>\*</small></sup>|36,58 ₽/daqqada<sup><small>\*</small></sup>|
 |[Skype](https://skype.com)|20 ¢/daqqada|10 ¢/daqqada|
 
-<sup><small>*</small></sup> *Belki de şu operatorlar vastasınen telefon etmege olmay.*
+<sup><small>\*</small></sup> *Belki de şu operatorlar vastasınen telefon etmege olmay.*
 
 Çoqusı allarda Qırımğa tek "МТС" nomeralarına telefon etmek imkânı bar:
 
 | Operator, Tarif | MTSke (+7) | Yerli telefonlarğa |
 |:--|:--:|:--:|
 |[Ukrtelekom](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/daqqada| — |
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 ₴/daqqada|5 ₴/daqqada<sup><small>*</small></sup>|
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 ₴/daqqada|5 ₴/daqqada<sup><small>*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 ₴/daqqada|5 ₴/daqqada<sup><small>\*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 ₴/daqqada|5 ₴/daqqada<sup><small>\*</small></sup>|
 |[МТС Украина](http://www.mts.ua/ru/), "[Безлимит за границу](http://www.mts.ua/ru/mobile/mezhdunarodnaya-svyaz/contract/bezlimit-za-granicu/)"|0 ₴/daqqada<sup><small>\*\*</small></sup>| — |
-|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 ₴/daqqada|11 ₴/daqqada<sup><small>*</small></sup>|
-|[Lifecell](http://www.lifecell.ua/ru/), "[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)"|2,86 ₴/daqqada|0,73 ₴/daqqada<sup><small>*</small></sup>|
-|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 ₴/daqqada|20 ₴/daqqada<sup><small>*</small></sup>|
-|[Киевстар](http://www.kyivstar.ua), "[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)"|1,5 ₴/daqqada|1,5 ₴/daqqada<sup><small>*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 ₴/daqqada|11 ₴/daqqada<sup><small>\*</small></sup>|
+|[Lifecell](http://www.lifecell.ua/ru/), "[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)"|2,86 ₴/daqqada|0,73 ₴/daqqada<sup><small>\*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/international_call/)|20 ₴/daqqada|20 ₴/daqqada<sup><small>\*</small></sup>|
+|[Киевстар](http://www.kyivstar.ua), "[Любимые страны](http://www.kyivstar.ua/ru/kr-620/mm/services/other_counries/favoritecountry/)"|1,5 ₴/daqqada|1,5 ₴/daqqada<sup><small>\*</small></sup>|
 |[Viber Out](https://account.viber.com/ru/)|9,5 ¢/daqqada|2,3 ¢/daqqada|
 |[Skype](https://secure.skype.com/ru/calling-rates?wt.mc_id=revamp&expo365=empty)|10 ¢/daqqada|2,3 ¢/daqqada|
 

@@ -1,0 +1,40 @@
+.head
+
+    &_level_1,
+    &_level_1 > &__image,
+    &_level_1 > &__fog,
+    &_level_1 > &__title
+        height 80vh
+        @media (orientation: portrait)
+           height 50vh
+
+    &_level_1 > &__image
+        background-image url('__image/_background/head__image_background_0m.jpeg')
+        background-attachment initial
+        //background-attachment scroll
+
+    &_level_2:nth-of-type(1),
+    &_level_2:nth-of-type(1) > &__image,
+    &_level_2:nth-of-type(1) > &__fog,
+    &_level_2:nth-of-type(1) > &__title
+        height 546px // m
+    &_level_2:nth-of-type(1) > &__image
+        background-image url('__image/_background/head__image_background_1m.jpeg')
+        background-attachment scroll
+
+    &_level_2:nth-of-type(2),
+    &_level_2:nth-of-type(2) > &__image,
+    &_level_2:nth-of-type(2) > &__fog,
+    &_level_2:nth-of-type(2) > &__title
+        height 683px // m
+    &_level_2:nth-of-type(2) > &__image
+        background-image url('__image/_background/head__image_background_2m.jpeg')
+        background-attachment scroll
+
+    &_level_2:nth-of-type(3),
+    &_level_2:nth-of-type(3) > &__image,
+    &_level_2:nth-of-type(3) > &__fog,
+    &_level_2:nth-of-type(3) > &__title
+        height 70vh
+    &_level_2:nth-of-type(3) > &__image
+        background-image url('__image/_background/head__image_background_3m.jpeg')

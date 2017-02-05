@@ -1,15 +1,22 @@
-var enbBemTechs = require('enb-bem-techs'),
+const enbBemTechs = require('enb-bem-techs'),
     i18nTech  = require('enb-bem-i18n/techs/i18n'),
     keysetsTech = require('enb-bem-i18n/techs/keysets'),
     fileProvideTech = require('enb/techs/file-provider'),
+    fileCopyTech = require('enb/techs/file-copy'),
     borschikTech = require('enb-borschik/techs/borschik');
 
-module.exports = function (config) {
-    var isProd = process.env.YENV === 'production';
+module.exports = config => {
+    const isProd = process.env.YENV === 'production';
 
     config.setLanguages([ 'uk', 'crh', 'ru']);
 
-    config.nodes('*.bundles/*', function (nodeConfig) {
+    config.nodes('*.bundles/*', nodeConfig => {
+        nodeConfig.addTargets([
+            '?.min.css',
+            '?.{lang}.min.js',
+            '?.{lang}.html'
+        ]);
+
         nodeConfig.addTechs([
             // essential
             [fileProvideTech, { target: '?.bemdecl.js' }],
@@ -67,32 +74,12 @@ module.exports = function (config) {
                 target: '?.{lang}.js',
                 sources: ['?.{lang}.browser.js', '?.lang.{lang}.js'],
                 lang: '{lang}'
-            }],
-
-            // borschik
-            [borschikTech, { source: '?.css', target: '?.min.css', freeze: true, minify: isProd }],
-            [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
-            /* html має мінімізуватись останнім */
-            [borschikTech, {
-                source: '?.{lang}.src.html',
-                target: '?.{lang}.html',
-                /* технологія borschik не вміє заміняти {lang} в опції dependantFiles */
-                dependantFiles: ['?.min.css'].concat(
-                    config.getLanguages().map(lang => '?.' + lang + '.min.js')
-                ),
-                freeze: true,
-                minify: isProd
-            }],
-        ]);
-
-        nodeConfig.addTargets([
-            '?.min.css',
-            '?.{lang}.min.js',
-            '?.{lang}.html'
+            }]
         ]);
     });
 
-    config.nodes('desktop.bundles/*', function (nodeConfig) {
+    // технології, що залежать від платформи
+    config.nodes('desktop.bundles/*', nodeConfig => {
         nodeConfig.addTechs([
             // essential
             [enbBemTechs.levels, {
@@ -100,10 +87,10 @@ module.exports = function (config) {
                     { path: 'libs/bem-core/common.blocks', check: false },
                     { path: 'libs/bem-core/desktop.blocks', check: false },
                     { path: 'libs/bem-components/common.blocks', check: false },
-                    { path: 'libs/bem-components/desktop.blocks', check: false },
                     { path: 'libs/bem-stat-counters/common.blocks', check: false },
                     'articles',
                     'common.blocks',
+                    'deskpad.blocks',
                     'desktop.blocks',
                     'configs/current/blocks'
                 ]
@@ -111,7 +98,7 @@ module.exports = function (config) {
             // css
             //TODO: Підтримати '?.ie.css'
             [require('enb-stylus/techs/stylus'), {
-                sourcemap: false,
+                sourcemap: !isProd,
 //                autoprefixer: {
 //                    browsers: [
 //                        'last 2 versions',
@@ -125,5 +112,86 @@ module.exports = function (config) {
 //                }
             }]
         ]);
+    });
+
+    config.nodes('touch-pad.bundles/*', nodeConfig => {
+        nodeConfig.addTechs([
+            // essential
+            [enbBemTechs.levels, {
+                levels: [
+                    { path: 'libs/bem-core/common.blocks', check: false },
+                    { path: 'libs/bem-core/touch.blocks', check: false },
+                    { path: 'libs/bem-components/common.blocks', check: false },
+                    { path: 'libs/bem-stat-counters/common.blocks', check: false },
+                    'articles',
+                    'common.blocks',
+                    'deskpad.blocks',
+                    'touch.blocks',
+                    'touch-pad.blocks',
+                    'configs/current/blocks'
+                ]
+            }],
+            // css
+            [require('enb-stylus/techs/stylus'), {
+                sourcemap: !isProd
+            }]
+        ]);
+    });
+
+    config.nodes('touch-phone.bundles/*', nodeConfig => {
+        nodeConfig.addTechs([
+            // essential
+            [enbBemTechs.levels, {
+                levels: [
+                    { path: 'libs/bem-core/common.blocks', check: false },
+                    { path: 'libs/bem-core/touch.blocks', check: false },
+                    { path: 'libs/bem-components/common.blocks', check: false },
+                    { path: 'libs/bem-stat-counters/common.blocks', check: false },
+                    'articles',
+                    'common.blocks',
+                    'touch.blocks',
+                    'touch-phone.blocks',
+                    'configs/current/blocks'
+                ]
+            }],
+            // css
+            [require('enb-stylus/techs/stylus'), {
+                sourcemap: !isProd
+            }]
+        ]);
+    });
+
+    // технології, що залежать від середовища
+    config.mode('development', () => {
+        config.nodes('*.bundles/*', nodeConfig => {
+            nodeConfig.addTechs([
+                [fileCopyTech, { source: '?.css', target: '?.min.css' }],
+                [fileCopyTech, { source: '?.{lang}.js', target: '?.{lang}.min.js' }],
+                [fileCopyTech, { source: '?.{lang}.src.html', target: '?.{lang}.html' }]
+            ]);
+        });
+    });
+
+    ['testing', 'production'].forEach(mode => {
+        config.mode(mode, () => {
+            config.nodes('*.bundles/*', nodeConfig => {
+                nodeConfig.addTechs([
+                    // borschik
+                    [borschikTech, { source: '?.css', target: '?.min.css', freeze: true, minify: isProd }],
+                    [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
+                    /* html має мінімізуватись останнім */
+                    [borschikTech, {
+                        source: '?.{lang}.src.html',
+                        target: '?.{lang}.html',
+                        /* технологія borschik не вміє заміняти {lang} в опції dependantFiles */
+                        dependantFiles: ['?.min.css'].concat(
+                            config.getLanguages().map(lang => '?.' + lang + '.min.js')
+                        ),
+                        freeze: true,
+                        minify: isProd
+                    }]
+                ]);
+            });
+        });
     });
 };
