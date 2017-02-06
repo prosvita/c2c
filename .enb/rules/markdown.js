@@ -55,11 +55,14 @@ module.exports = {
                     return '';
                 }
 
-                if (element.match(/^\n+$/)
-                    || element.match(/^<!-- begin:.+$/)
+                if (element.match(/^<!-- begin:.+$/)
                     || element.match(/^<!-- end:.+$/)) {
                     return '';
                 }
+            }
+
+            if (element.match(/^\n+$/)) {
+                return '';
             }
 
             return element;
