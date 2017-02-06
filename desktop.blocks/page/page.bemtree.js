@@ -1,3 +1,17 @@
+block('page').def()((node, ctx) => {
+    if (!ctx.styles) {
+        ctx.styles = [];
+    }
+
+    ctx.styles.push({
+        elem: 'conditional-comment',
+        condition : 'lte IE 9',
+        content : { elem : 'css', url : 'call.min.ie.css' }
+    });
+
+    return applyNext();
+});
+
 block('page').content()((node, ctx) => [
     {
         block: 'header',

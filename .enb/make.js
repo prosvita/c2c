@@ -6,7 +6,8 @@ const enbBemTechs = require('enb-bem-techs'),
     borschikTech = require('enb-borschik/techs/borschik');
 
 module.exports = config => {
-    const isProd = process.env.YENV === 'production';
+    const isDev = process.env.YENV !== 'production' && process.env.YENV !== 'testing',
+        isProd = process.env.YENV === 'production';
 
     config.setLanguages([ 'uk', 'crh', 'ru']);
 
@@ -98,7 +99,7 @@ module.exports = config => {
             // css
             //TODO: Підтримати '?.ie.css'
             [require('enb-stylus/techs/stylus'), {
-                sourcemap: !isProd,
+                sourcemap: isDev,
 //                autoprefixer: {
 //                    browsers: [
 //                        'last 2 versions',
@@ -110,7 +111,16 @@ module.exports = config => {
 //                        '> 2%'
 //                    ]
 //                }
+            }],
+            [require('enb-stylus/techs/stylus'), {
+                target: '?.ie.css',
+                sourceSuffixes: ['ie.styl', 'ie.css'],
+                sourcemap: isDev
             }]
+        ]);
+
+        nodeConfig.addTargets([
+            '?.min.ie.css'
         ]);
     });
 
@@ -133,7 +143,7 @@ module.exports = config => {
             }],
             // css
             [require('enb-stylus/techs/stylus'), {
-                sourcemap: !isProd
+                sourcemap: isDev
             }]
         ]);
     });
@@ -156,7 +166,7 @@ module.exports = config => {
             }],
             // css
             [require('enb-stylus/techs/stylus'), {
-                sourcemap: !isProd
+                sourcemap: isDev
             }]
         ]);
     });
@@ -166,6 +176,7 @@ module.exports = config => {
         config.nodes('*.bundles/*', nodeConfig => {
             nodeConfig.addTechs([
                 [fileCopyTech, { source: '?.css', target: '?.min.css' }],
+                [fileCopyTech, { source: '?.ie.css', target: '?.min.ie.css' }],
                 [fileCopyTech, { source: '?.{lang}.js', target: '?.{lang}.min.js' }],
                 [fileCopyTech, { source: '?.{lang}.src.html', target: '?.{lang}.html' }]
             ]);
@@ -178,6 +189,7 @@ module.exports = config => {
                 nodeConfig.addTechs([
                     // borschik
                     [borschikTech, { source: '?.css', target: '?.min.css', freeze: true, minify: isProd }],
+                    [borschikTech, { source: '?.ie.css', target: '?.min.ie.css', freeze: true, minify: isProd }],
                     [borschikTech, { source: '?.{lang}.js', target: '?.{lang}.min.js', freeze: true, minify: isProd }],
                     /* html має мінімізуватись останнім */
                     [borschikTech, {
