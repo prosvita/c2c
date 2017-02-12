@@ -9,6 +9,10 @@ block('page').elem('og')(
             { elem: 'meta', attrs: { property: 'twitter:card', content: 'summary' } }
         ];
 
+        if (node.i18n('page', 'locale:alternate') !== 'page:locale:alternate') {
+            content.push({ elem: 'meta', attrs: { property: 'og:locale:alternate', content: node.i18n('page', 'locale:alternate') } });
+        }
+
         if (ctx.og.title) {
             content.push({ elem: 'meta', attrs: { property: 'og:title', content: ctx.og.title } });
             content.push({ elem: 'meta', attrs: { property: 'twitter:title', content: ctx.og.title } });

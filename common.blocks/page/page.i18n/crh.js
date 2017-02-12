@@ -1,6 +1,7 @@
 module.exports = {
     page: {
         lang: 'crh',
-        locale: 'crh'
+        locale: 'crh_UA',
+        'locale:alternate': 'crh_TR'
     }
 };
