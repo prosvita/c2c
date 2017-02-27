@@ -13,7 +13,7 @@ module.exports = {
     gridUrl: process.env.GRIDURL || 'http://localhost:4444/wd/hub',
 
     screenshotsDir: 'test/references',
-    suitesPerSession: 2,
+    suitesPerSession: 20,
     sessionsPerBrowser: 2,
     retry: 1,
 
