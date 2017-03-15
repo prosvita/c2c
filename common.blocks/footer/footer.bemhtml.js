@@ -33,18 +33,31 @@ block('footer')(
     ),
 
     elem('copyright')(
-        content()(node => {
-            return '© 2016–2017 ' + node.i18n('footer', 'organisation')
+        content()((node, ctx) => {
+            const start = ctx.start,
+                current = (new Date()).getFullYear();
+
+            return [
+                '©\u00a0',
+                start && start !== current && (start + '–'),
+                current,
+                '\u00a0\u00a0',
+                ctx.content
+            ];
         })
     ),
 
-    content()(() => [{
+    content()(node => [{
         elem: 'container',
         content: [
             { elem: 'about' },
             { elem: 'feedback' },
             { elem: 'disclaimers' },
-            { elem: 'copyright' }
+            {
+                elem: 'copyright',
+                start: 2016,
+                content: node.i18n('footer', 'organisation')
+            }
         ]
     }]),
 

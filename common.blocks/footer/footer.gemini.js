@@ -5,6 +5,6 @@ gemini.suite('footer', suite => {
         .capture('plain', (actions, find) => {
             actions
                 .executeJS(window => window.scrollTo(0, find('footer').scrollHeight))
-                .wait(1000);
+                .wait(1200);
         });
 });
