@@ -1,12 +1,12 @@
 module.exports = {
     footer: {
-        'about-title': 'Biz aqqında',
-        'about': '“Просвіта” — Ukraina halqlarnıñ milliy medeniyet ve özgünlini saqlamaq maqsadınen bağlı adiy insanlar. Biz qayd etilmegen teşkilâtmız ve böyle ya da oşağan adlarnı taşığan teşkilâtlarnen bağlı degilmiz.',
-        'feedback-title': 'Arqa bağ',
-        'feedback': 'Bir-de bir malümatlarnı bilmek içün,bizge mesac yaza bilesiñiz. Biz mutlaqa sizge cevap yazmağa tırışarıq. Eger malümat faydalı olsa, biz onı saytımızda yerleştirerik.',
-        'bugreport': 'Yeger sizge qata tapqan olsañız ya da malümat qoşmaq isteseñiz, bizge yaza bilesiñiz.',
-        'disclaimers-title': 'Mesülietten red etüv',
-        'disclaimers': 'Sayt berilgen malümatnıñ aynılığı içün özüni mesüliyetlikten boşata. Daa doğru malümatlarnı bilmek içün berilgen bağ operatorlarına muraacatta buluna bilesiñiz.',
+        'about-title': 'Aqqımızda',
+        'about': '“Просвіта” — Ukraina halqlarnıñ milliy medeniyet ve özgünlini saqlamağa tırışqan adiy insanlar. Biz resmiy olaraq qayd olunğan teşkilât degilmiz ve böyle ya da oşağan adlarnı taşığan teşkilâtlarnen bağlı degilmiz.',
+        'feedback-title': 'Biz ile alâqa',
+        'feedback': 'Bir şey aqqında daa çoq bilmek içün, bizge bir mektüp yaza bilesiñiz. Biz mıtlaqa sizge cevap bermege tırışırmız. Eger bizge faydalı bir malümat bildirseñiz, biz onı saytımızda yerleştirirmiz.',
+        'bugreport': 'Eger bir hata tapqan olsañız ya da saytqa bir malümat qoşmaq isteseñiz, bizge yaza bilesiñiz.',
+        'disclaimers-title': 'Mesüliyetten red etüv',
+        'disclaimers': 'Sayt içindeki malümatnıñ doğrulığı içün cevapkâr degil. Tarifler aqqında daa doğru malümatlarnı bilmek içün alâqa operatorlarına muracaatta buluna bilesiñiz.',
         'organisation': '“Просвіта”'
     }
 };
