@@ -34,8 +34,7 @@
 | Оператор, Тариф | На МТС (+7) | На міські телефони |
 |:--|:--:|:--:|
 |[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/хв| — |
-|[Vodafone](https://www.vodafone.ua/uk/rates/private), Light, Red XS|5 грн/хв|5 грн/хв<sup><small>\*</small></sup>|
-|[Vodafone](https://www.vodafone.ua/uk/rates/private), Red S, M, L|1 грн/хв|5 грн/хв<sup><small>\*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/uk/rates/private)|3 грн/хв|0,5 грн/хв<sup><small>\*</small></sup>|
 |[МТС Україна](http://www.mts.ua/ua/), «[Безліміт за кордон](http://www.mts.ua/ua/mobile/mezhdunarodnaya-svyaz/contract/bezlimit-za-granicu/)»|0 грн/хв<sup><small>\*\*</small></sup>| — |
 |[Lifecell](http://www.lifecell.ua/uk/mobilnij-zvyazok/mizhnarodnij-zvyazok/taryfy/)|11 грн/хв|11 грн/хв<sup><small>\*</small></sup>|
 |[Lifecell](http://www.lifecell.ua/uk/), «[Дзвінки за кордон](http://www.lifecell.ua/uk/mobilnij-zvyazok/taryfy/Calls_abroad/)»|2,86 грн/хв|0,73 грн/хв<sup><small>\*</small></sup>|
@@ -94,7 +93,7 @@
 |Порівняння тарифів|[Vega](http://www.vegatele.com/ukr/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/ukr/utariffs/uall_tariffs)|[Zadarma](https://zadarma.com/ua/tariffs/calls/compare/)|
 |:--|:--:|:--:|:--:|:--:|
 |Підключення| 1 грн | 0 | 25 грн +<br/>25 грн на рахунок | 0 |
-|Абонентська плата| 46,97 грн/міс. | 10 грн/міс. | 0 | 0 |
+|Абонентська плата| 57,97 грн/міс. | 10 грн/міс. | 0 | 0 |
 |На місцевий| 1000 хв. 0,<br/>далі 0,054 грн/хв | — | — | [7,5 руб/хв](https://zadarma.com/ua/tariffs/numbers/ukraine) |
 |На міжміський| 0,66 грн/хв | 0,43 грн/хв | 0,5 грн/хв | 7,5 руб/хв |
 |На мобільний| 1,2 грн/хв | 1,2 грн/хв | 0,75 грн/хв | 15 руб/хв |
