@@ -34,8 +34,7 @@ Bu alâqa sizge kelişmese, Qırımda aşağıda kösterilgen operatorlarnıñ h
 | Operator, Tarif | MTSke (+7) | Yerli telefonlarğa |
 |:--|:--:|:--:|
 |[Ukrtelekom](http://www.ukrtelecom.ua/services/customers/phone_international_new)|24 ¢/daqqada| — |
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Light, Red XS|5 ₴/daqqada|5 ₴/daqqada<sup><small>\*</small></sup>|
-|[Vodafone](https://www.vodafone.ua/ru/rates/private), Red S, M, L|1 ₴/daqqada|5 ₴/daqqada<sup><small>\*</small></sup>|
+|[Vodafone](https://www.vodafone.ua/ru/rates/private)|3 ₴/daqqada|0,5 ₴/daqqada<sup><small>\*</small></sup>|
 |[МТС Украина](http://www.mts.ua/ru/), "[Безлимит за границу](http://www.mts.ua/ru/mobile/mezhdunarodnaya-svyaz/contract/bezlimit-za-granicu/)"|0 ₴/daqqada<sup><small>\*\*</small></sup>| — |
 |[Lifecell](http://www.lifecell.ua/ru/mobilnaya-svyaz/mezhdunarodnaya-svyaz/tarify/)|11 ₴/daqqada|11 ₴/daqqada<sup><small>\*</small></sup>|
 |[Lifecell](http://www.lifecell.ua/ru/), "[Звонки за границу](http://www.lifecell.ua/ru/mobilnaya-svyaz/tarify/Calls_abroad/)"|2,86 ₴/daqqada|0,73 ₴/daqqada<sup><small>\*</small></sup>|
@@ -95,7 +94,7 @@ Bunı añlaşma tizgende operatorğa haber etmeli ya da, eger operator böyle im
 | Tarifler qıyaslanması |[Vega](http://www.vegatele.com/rus/for_home/phone/ip_phone/vega_phone)|[Укртелеком](http://www.ukrtelecom.ua/services/customers/phone/simple)|[Атлантис Телеком](https://atelecom.biz/rus/tariffs/all_tariffs)|[Zadarma](https://zadarma.com/ru/tariffs/calls/compare/)|
 |:--|:--:|:--:|:--:|:--:|
 | Qoşuluv | 1 ₴ | 0 | 25 ₴ +<br/>25 ₴ esapqa | 0 |
-| Abonent tölevi | 46,97 ₴/ayda | 10 ₴/ayda | 0 | 0 |
+| Abonent tölevi | 57,97 ₴/ayda | 10 ₴/ayda | 0 | 0 |
 | Yerli | 1000 daqqada 0,<br/>daleye 0,054 ₴/daqqada | — | — | [7,5 ₽/daqqada](https://zadarma.com/ru/tariffs/numbers/ukraine) |
 | Şeerlerara | 0,66 ₴/daqqada | 0,43 ₴/daqqada | 0,5 ₴/daqqada | 7,5 ₽/daqqada |
 | Cep telefonğa | 1,2 ₴/daqqada | 1,2 ₴/daqqada | 0,75 ₴/daqqada | 15 ₽/daqqada |
