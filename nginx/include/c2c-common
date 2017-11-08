@@ -1,18 +1,24 @@
 location = / {
     if ($cookie_language) {
-        return 302 /$cookie_language/;
+#        return 302 /$cookie_language/;
+        return 301 $scheme://$host/$cookie_language/call;
     }
-    return 302 /uk/call;
+#    return 302 /uk/call;
+    return 301 $scheme://$host/uk/call;
 }
 
 location ~ ^/(?<lang>(uk|crh|ru)) {
-    rewrite ^/\w+/?(\?.*)?$ /$lang/call/$1 permanent;
+#    rewrite ^/\w+/?(\?.*)?$ /$lang/call/$1 permanent;
+    if ($request_uri = "/$lang") {
+        return 301 $scheme://$host/$lang/call;
+    }
     rewrite ^/\w+/(?<page>[\w-]+)/?(\?.*)?$ /$ua_device.bundles/$page/$page.$lang.html$2 last;
 }
 
 location /_/ {
-    gzip_static on;
+    # gzip_static on;
     expires 365d;
+    access_log off;
 }
 
 location = /favicon.ico {
