@@ -22,6 +22,7 @@ location /_/ {
 }
 
 location = /favicon.ico {
-    alias /var/www/c2c/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
+#    alias /var/www/c2c/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
+    alias /app/static/c2c/_/xYzpQbVJGcFH9P30NORXBw9sMmE.ico;
     access_log off;
 }
