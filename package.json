@@ -14,20 +14,21 @@
     "node": ">=6"
   },
   "dependencies": {
-    "enb": "^1.3.0",
     "bower": "^1.7.9",
+    "enb": "^1.3.0",
     "enb-bem-i18n": "^1.1.1",
     "enb-bem-techs": "^2.2.1",
     "enb-bemxjst": "^7.6.1",
-    "enb-bemxjst-i18n": "tadatuta/enb-bemxjst-i18n.git#bemtree-nextgen",
+    "enb-bemxjst-i18n": "github:levonet/enb-bemxjst-i18n#acd48e2",
     "enb-borschik": "^2.4.0",
     "enb-js": "^1.1.0",
-    "enb-markdown": "0.1.0",
+    "enb-markdown": "^0.2.3",
     "enb-stylus": "^2.4.0"
   },
   "devDependencies": {
-    "gemini": "^4.16.0",
+    "gemini": "^5.0.0-alpha.12",
     "gemini-optipng": "^1.0.0",
+    "html-reporter": "^1.0.0",
     "http-server": "^0.8.0"
   },
   "scripts": {
@@ -36,9 +37,9 @@
     "configs": ".scripts/yconf.sh reset",
     "build": "YENV=${YENV:-$(.scripts/yconf.sh)} $(npm bin)/enb make *.bundles/*",
     "start": "YENV=${YENV:-$(.scripts/yconf.sh)} $(npm bin)/enb server",
-    "gemini": "$(npm bin)/http-server -s & p=$!; $(npm bin)/gemini test --reporter html --reporter flat; e=$?; kill -TERM ${p}; exit ${e}",
-    "gemini-dist": "DIR=`mktemp -dt 'c2c'`; tar -xf $(cat .dist) -C ${DIR}; $(npm bin)/http-server ${DIR} -s & p=$!; $(npm bin)/gemini test --reporter html --reporter flat; e=$?; kill -TERM ${p}; rm -rf ${DIR}; exit ${e}",
-    "gemini-site": ".scripts/yconf.sh silent && . configs/current/settings.sh; BASEURL=${BASEURL} $(npm bin)/gemini test --reporter html --reporter flat",
+    "gemini": "$(npm bin)/http-server -s & p=$!; $(npm bin)/gemini test; e=$?; kill -TERM ${p}; exit ${e}",
+    "gemini-dist": "DIR=`mktemp -dt 'c2c'`; tar -xf $(cat .dist) -C ${DIR}; $(npm bin)/http-server ${DIR} -s & p=$!; $(npm bin)/gemini test; e=$?; kill -TERM ${p}; rm -rf ${DIR}; exit ${e}",
+    "gemini-site": ".scripts/yconf.sh silent && . configs/current/settings.sh; BASEURL=${BASEURL} $(npm bin)/gemini test",
     "gemini-update": "$(npm bin)/http-server -c \"no-cache, no-store\" -s & p=$!; $(npm bin)/gemini update; kill -TERM ${p}",
     "dist": ".scripts/dist.sh",
     "clean": ".scripts/clean.sh"

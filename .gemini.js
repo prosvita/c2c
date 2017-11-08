@@ -21,7 +21,10 @@ module.exports = {
         'desktop-chrome': {
             windowSize: '1280x768',
             desiredCapabilities: {
-                browserName: 'chrome'
+                browserName: 'chrome',
+                chromeOptions: {
+                    args: [ '--disable-gpu', '--disable-infobars' ]
+                }
             }
         }
     },
@@ -41,6 +44,7 @@ module.exports = {
 
     system: {
         plugins: {
+            'html-reporter': {},
             optipng: {
                 level: 2
             }
